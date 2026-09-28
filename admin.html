@@ -677,6 +677,11 @@
       const idbData = await getFromIndexedDB('site_data');
       if (idbData && idbData.properties && idbData.properties.length > 0) {
         siteData = idbData;
+        if (!siteData.contact) siteData.contact = {};
+        if (!siteData.contact.email || siteData.contact.email === 'enquiry@khoraniyaprime.com') {
+          siteData.contact.email = 'khoraniyaprimeproperties@gmail.com';
+          await saveLocalData();
+        }
         return;
       }
 
@@ -687,6 +692,11 @@
           const parsed = JSON.parse(localData);
           if (parsed && parsed.properties && parsed.properties.length > 0) {
             siteData = parsed;
+            if (!siteData.contact) siteData.contact = {};
+            if (!siteData.contact.email || siteData.contact.email === 'enquiry@khoraniyaprime.com') {
+              siteData.contact.email = 'khoraniyaprimeproperties@gmail.com';
+              await saveLocalData();
+            }
             return;
           }
         } catch (e) {}
@@ -697,6 +707,10 @@
         const res = await fetch('assets/data/site-data.json?t=' + Date.now());
         if (res.ok) {
           siteData = await res.json();
+          if (!siteData.contact) siteData.contact = {};
+          if (!siteData.contact.email || siteData.contact.email === 'enquiry@khoraniyaprime.com') {
+            siteData.contact.email = 'khoraniyaprimeproperties@gmail.com';
+          }
           await saveLocalData();
         }
       } catch (err) {

@@ -191,7 +191,29 @@ async function loadSiteData() {
     // If idbData exists and has properties, merge them with serverData!
     // Any project created by the user (in idbData or serverData) will be included immediately!
     if (serverData || idbData || cachedData) {
-      const baseContact = idbData?.contact || serverData?.contact || cachedData?.contact || defaultSiteData.contact;
+      // Prioritize published serverData contact, then fallback to idb/cached/defaults
+      const baseContact = {
+        ...defaultSiteData.contact,
+        ...(cachedData?.contact || {}),
+        ...(idbData?.contact || {}),
+        ...(serverData?.contact || {})
+      };
+
+      // Strictly sanitize: replace any old placeholder with official email
+      if (!baseContact.email || baseContact.email.trim() === '' || baseContact.email === 'enquiry@khoraniyaprime.com') {
+        baseContact.email = 'khoraniyaprimeproperties@gmail.com';
+      }
+
+      // Proactively clean up any stale placeholder email in client's local storage & IndexedDB
+      if (idbData && idbData.contact && (idbData.contact.email === 'enquiry@khoraniyaprime.com' || !idbData.contact.email)) {
+        idbData.contact.email = 'khoraniyaprimeproperties@gmail.com';
+        saveToIndexedDB('site_data', idbData).catch(() => {});
+      }
+      if (cachedData && cachedData.contact && (cachedData.contact.email === 'enquiry@khoraniyaprime.com' || !cachedData.contact.email)) {
+        cachedData.contact.email = 'khoraniyaprimeproperties@gmail.com';
+        try { localStorage.setItem('khoraniya_site_data', JSON.stringify(cachedData)); } catch(e) {}
+      }
+
       const propMap = new Map();
       
       // 1. Add server properties
@@ -406,10 +428,14 @@ function bindContactInfo() {
   });
 
   // Email
+  const safeEmail = (contact && contact.email && contact.email !== 'enquiry@khoraniyaprime.com')
+    ? contact.email.trim()
+    : 'khoraniyaprimeproperties@gmail.com';
+
   document.querySelectorAll('[data-bind="email"]').forEach(el => {
-    el.textContent = contact.email || 'khoraniyaprimeproperties@gmail.com';
+    el.textContent = safeEmail;
     if (el.tagName === 'A') {
-      el.href = `mailto:${contact.email || 'khoraniyaprimeproperties@gmail.com'}`;
+      el.href = `mailto:${safeEmail}`;
     }
   });
 
