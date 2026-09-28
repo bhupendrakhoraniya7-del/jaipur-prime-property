@@ -8,7 +8,7 @@ const defaultSiteData = {
     phone: "7689932586",
     rawPhone: "7689932586",
     whatsapp: "7689932586",
-    email: "enquiry@khoraniyaprime.com",
+    email: "khoraniyaprimeproperties@gmail.com",
     address: "Jaipur, Rajasthan 302001",
     tagline: "Invest. Own. Prosper."
   },
@@ -407,9 +407,9 @@ function bindContactInfo() {
 
   // Email
   document.querySelectorAll('[data-bind="email"]').forEach(el => {
-    el.textContent = contact.email || 'enquiry@khoraniyaprime.com';
+    el.textContent = contact.email || 'khoraniyaprimeproperties@gmail.com';
     if (el.tagName === 'A') {
-      el.href = `mailto:${contact.email || 'enquiry@khoraniyaprime.com'}`;
+      el.href = `mailto:${contact.email || 'khoraniyaprimeproperties@gmail.com'}`;
     }
   });
 

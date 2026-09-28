@@ -55,7 +55,7 @@ khoraniya-prime-properties/
 ### 2. Phone & Email in HTML
 - In [`index.html`](file:///c:/Users/bhupendra/Desktop/khoraniya-prime-properties/index.html), search for `Placeholder` to replace contact details in the footer and mobile dock:
   - Phone: `+91 98765 XXXXX`
-  - Email: `enquiry@khoraniyaprime.com`
+  - Email: `khoraniyaprimeproperties@gmail.com`
   - Office Address: `Civil Lines / C-Scheme, Jaipur, Rajasthan 302001`
 
 ### 3. Property Cards & Modal Specs

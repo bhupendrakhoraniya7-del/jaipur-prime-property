@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Covers & Banners | Khoraniya Prime Properties</title>
+  
+  <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#C5A880',
+              goldLight: '#D5BA8E',
+              goldDark: '#A8885B',
+              dark: '#141619',
+              darker: '#0B0D0F',
+              card: '#1C2026',
+              border: '#2A303A',
+              cream: '#FAF8F5'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .gold-gradient {
+      background: linear-gradient(135deg, #D5BA8E 0%, #C5A880 50%, #A8885B 100%);
+    }
+  </style>
+</head>
+<body class="bg-[#0B0D0F] text-stone-200 min-h-screen flex flex-col">
+
+  <!-- Top Header Bar -->
+  <header class="bg-[#141619]/90 backdrop-blur-md border-b border-stone-800 sticky top-0 z-50 py-3.5 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl overflow-hidden border border-[#C5A880]/50 shadow bg-white p-0.5">
+          <img src="assets/images/logo-icon.jpg" alt="Logo" class="w-full h-full object-cover">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold leading-none mb-1">Khoraniya</span>
+          <span class="font-serif text-lg font-bold text-white group-hover:text-[#D5BA8E] transition-colors leading-none">PRIME PROPERTIES</span>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="text-xs uppercase tracking-wider text-stone-300 hover:text-white px-3 py-1.5 rounded border border-white/10 hover:border-white/30 transition-colors">
+          ← Back to Website
+        </a>
+        <a href="tel:+917689932586" class="hidden sm:inline-flex items-center gap-1.5 gold-gradient text-[#141619] font-semibold text-xs px-3.5 py-1.5 rounded shadow">
+          <span>Direct Contact: +91 7689932586</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="py-12 px-4 sm:px-8 text-center max-w-4xl mx-auto">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-[#C5A880]/30 text-xs font-semibold uppercase tracking-widest text-[#D5BA8E] mb-4">
+      <span>Official Marketing & Social Media Assets</span>
+    </div>
+    <h1 class="font-serif text-3xl sm:text-5xl font-bold text-white tracking-tight mb-3">
+      Social Media Cover Photos & Banners
+    </h1>
+    <p class="text-stone-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-8">
+      Designed with official brand guidelines for Facebook, WhatsApp Business, and Instagram. Download high-resolution banners ready to upload.
+    </p>
+
+    <!-- Platform Filter Tabs -->
+    <div class="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#141619] rounded-xl border border-stone-800 max-w-lg mx-auto">
+      <button onclick="filterCovers('all')" id="btn-all" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider gold-gradient text-[#141619] shadow transition-all">
+        All Covers
+      </button>
+      <button onclick="filterCovers('facebook')" id="btn-facebook" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-stone-400 hover:text-white transition-all">
+        Facebook (2)
+      </button>
+      <button onclick="filterCovers('whatsapp')" id="btn-whatsapp" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-stone-400 hover:text-white transition-all">
+        WhatsApp (2)
+      </button>
+      <button onclick="filterCovers('instagram')" id="btn-instagram" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-stone-400 hover:text-white transition-all">
+        Instagram (4)
+      </button>
+    </div>
+  </section>
+
+  <!-- Covers Grid Section -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-8 pb-20 flex-1 w-full space-y-16">
+
+    <!-- 1. FACEBOOK COVERS SECTION -->
+    <section class="cover-card space-y-6" data-platform="facebook">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-stone-800 gap-2">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-[#1877F2]/20 text-[#1877F2] flex items-center justify-center font-bold text-lg">
+            f
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-white font-serif tracking-wide">Facebook Page Cover Photos</h2>
+            <p class="text-xs text-stone-400">Desktop & Mobile Optimized Safe Zone • 1640 × 624 px (High-Res 2x) & 820 × 312 px</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Dark Edition -->
+        <div class="bg-[#141619] rounded-2xl border border-stone-800 overflow-hidden shadow-xl flex flex-col justify-between">
+          <div class="p-4 bg-stone-900/60 border-b border-stone-800 flex items-center justify-between">
+            <span class="text-xs uppercase tracking-widest text-[#D5BA8E] font-semibold">1. Obsidian Dark Luxury Edition</span>
+            <span class="text-[11px] text-stone-400 bg-black/40 px-2 py-0.5 rounded">1640 × 624 px</span>
+          </div>
+          <div class="p-4 bg-[#0B0D0F]">
+            <img src="assets/covers/facebook-cover-dark-1640x624.jpg" alt="Facebook Cover Dark" class="w-full h-auto rounded-lg shadow-md border border-stone-800 hover:scale-[1.01] transition-transform">
+          </div>
+          <div class="p-4 bg-stone-900/40 border-t border-stone-800 flex items-center justify-between gap-3">
+            <span class="text-xs text-stone-400">Recommended for VIP Branding</span>
+            <div class="flex items-center gap-2">
+              <a href="assets/covers/facebook-cover-dark-1640x624.jpg" download="facebook-cover-dark-1640x624.jpg" class="gold-gradient text-[#141619] font-bold text-xs px-3.5 py-2 rounded-lg shadow flex items-center gap-1.5 hover:opacity-95">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <span>Download (1640x624)</span>
+              </a>
+              <a href="assets/covers/facebook-cover-dark-820x312.jpg" download="facebook-cover-dark-820x312.jpg" class="bg-stone-800 text-stone-300 hover:text-white font-medium text-xs px-2.5 py-2 rounded-lg border border-stone-700">
+                <span>820x312</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- White Edition -->
+        <div class="bg-[#141619] rounded-2xl border border-stone-800 overflow-hidden shadow-xl flex flex-col justify-between">
+          <div class="p-4 bg-stone-900/60 border-b border-stone-800 flex items-center justify-between">
+            <span class="text-xs uppercase tracking-widest text-stone-300 font-semibold">2. Architectural White Edition</span>
+            <span class="text-[11px] text-stone-400 bg-black/40 px-2 py-0.5 rounded">1640 × 624 px</span>
+          </div>
+          <div class="p-4 bg-[#0B0D0F]">
+            <img src="assets/covers/facebook-cover-white-1640x624.jpg" alt="Facebook Cover White" class="w-full h-auto rounded-lg shadow-md border border-stone-800 hover:scale-[1.01] transition-transform">
+          </div>
+          <div class="p-4 bg-stone-900/40 border-t border-stone-800 flex items-center justify-between gap-3">
+            <span class="text-xs text-stone-400">Minimalist & Crisp Clean Look</span>
+            <div class="flex items-center gap-2">
+              <a href="assets/covers/facebook-cover-white-1640x624.jpg" download="facebook-cover-white-1640x624.jpg" class="gold-gradient text-[#141619] font-bold text-xs px-3.5 py-2 rounded-lg shadow flex items-center gap-1.5 hover:opacity-95">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <span>Download (1640x624)</span>
+              </a>
+              <a href="assets/covers/facebook-cover-white-820x312.jpg" download="facebook-cover-white-820x312.jpg" class="bg-stone-800 text-stone-300 hover:text-white font-medium text-xs px-2.5 py-2 rounded-lg border border-stone-700">
+                <span>820x312</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. WHATSAPP BUSINESS COVERS SECTION -->
+    <section class="cover-card space-y-6" data-platform="whatsapp">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-stone-800 gap-2">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-[#25D366]/20 text-[#25D366] flex items-center justify-center font-bold text-base">
+            💬
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-white font-serif tracking-wide">WhatsApp Business Profile Cover Photos</h2>
+            <p class="text-xs text-stone-400">16:9 Aspect Ratio • 1152 × 648 px (Standard Profile Header Size)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- WhatsApp Dark -->
+        <div class="bg-[#141619] rounded-2xl border border-stone-800 overflow-hidden shadow-xl flex flex-col justify-between">
+          <div class="p-4 bg-stone-900/60 border-b border-stone-800 flex items-center justify-between">
+            <span class="text-xs uppercase tracking-widest text-[#D5BA8E] font-semibold">1. Obsidian Dark Luxury Edition</span>
+            <span class="text-[11px] text-stone-400 bg-black/40 px-2 py-0.5 rounded">1152 × 648 px</span>
+          </div>
+          <div class="p-4 bg-[#0B0D0F]">
+            <img src="assets/covers/whatsapp-cover-dark-1152x648.jpg" alt="WhatsApp Cover Dark" class="w-full h-auto rounded-lg shadow-md border border-stone-800 hover:scale-[1.01] transition-transform">
+          </div>
+          <div class="p-4 bg-stone-900/40 border-t border-stone-800 flex items-center justify-between gap-3">
+            <span class="text-xs text-stone-400">High Trust & Direct WhatsApp CTA</span>
+            <a href="assets/covers/whatsapp-cover-dark-1152x648.jpg" download="whatsapp-cover-dark-1152x648.jpg" class="gold-gradient text-[#141619] font-bold text-xs px-4 py-2 rounded-lg shadow flex items-center gap-1.5 hover:opacity-95">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Download Cover</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- WhatsApp White -->
+        <div class="bg-[#141619] rounded-2xl border border-stone-800 overflow-hidden shadow-xl flex flex-col justify-between">
+          <div class="p-4 bg-stone-900/60 border-b border-stone-800 flex items-center justify-between">
+            <span class="text-xs uppercase tracking-widest text-stone-300 font-semibold">2. Architectural White Edition</span>
+            <span class="text-[11px] text-stone-400 bg-black/40 px-2 py-0.5 rounded">1152 × 648 px</span>
+          </div>
+          <div class="p-4 bg-[#0B0D0F]">
+            <img src="assets/covers/whatsapp-cover-white-1152x648.jpg" alt="WhatsApp Cover White" class="w-full h-auto rounded-lg shadow-md border border-stone-800 hover:scale-[1.01] transition-transform">
+          </div>
+          <div class="p-4 bg-stone-900/40 border-t border-stone-800 flex items-center justify-between gap-3">
+            <span class="text-xs text-stone-400">Crisp Corporate Clean White</span>
+            <a href="assets/covers/whatsapp-cover-white-1152x648.jpg" download="whatsapp-cover-white-1152x648.jpg" class="gold-gradient text-[#141619] font-bold text-xs px-4 py-2 rounded-lg shadow flex items-center gap-1.5 hover:opacity-95">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Download Cover</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. INSTAGRAM COVERS SECTION -->
+    <section class="cover-card space-y-6" data-platform="instagram">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-stone-800 gap-2">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#FD1D1D] to-[#833AB4] text-white flex items-center justify-center font-bold text-base">
+            📸
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-white font-serif tracking-wide">Instagram Profile Post & Story Covers</h2>
+            <p class="text-xs text-stone-400">1:1 Square Posts (1080 × 1080 px) & 9:16 Story / Highlight Covers (1080 × 1920 px)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Square 1080x1080 Posts -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <!-- Insta Post Dark -->
+        <div class="bg-[#141619] rounded-2xl border border-stone-800 overflow-hidden shadow-xl flex flex-col justify-between">
+          <div class="p-4 bg-stone-900/60 border-b border-stone-800 flex items-center justify-between">
+            <span class="text-xs uppercase tracking-widest text-[#D5BA8E] font-semibold">Instagram Square Post (Dark)</span>
+            <span class="text-[11px] text-stone-400 bg-black/40 px-2 py-0.5 rounded">1080 × 1080 px</span>
+          </div>
+          <div class="p-6 bg-[#0B0D0F] flex items-center justify-center">
+            <img src="assets/covers/instagram-post-dark-1080x1080.jpg" alt="Insta Post Dark" class="max-h-[380px] w-auto rounded-lg shadow-md border border-stone-800 hover:scale-[1.01] transition-transform">
+          </div>
+          <div class="p-4 bg-stone-900/40 border-t border-stone-800 flex items-center justify-between gap-3">
+            <span class="text-xs text-stone-400">Profile Grid Pin & Carousel Cover</span>
+            <a href="assets/covers/instagram-post-dark-1080x1080.jpg" download="instagram-post-dark-1080x1080.jpg" class="gold-gradient text-[#141619] font-bold text-xs px-4 py-2 rounded-lg shadow flex items-center gap-1.5 hover:opacity-95">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Download Square</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Insta Post White -->
+        <div class="bg-[#141619] rounded-2xl border border-stone-800 overflow-hidden shadow-xl flex flex-col justify-between">
+          <div class="p-4 bg-stone-900/60 border-b border-stone-800 flex items-center justify-between">
+            <span class="text-xs uppercase tracking-widest text-stone-300 font-semibold">Instagram Square Post (White)</span>
+            <span class="text-[11px] text-stone-400 bg-black/40 px-2 py-0.5 rounded">1080 × 1080 px</span>
+          </div>
+          <div class="p-6 bg-[#0B0D0F] flex items-center justify-center">
+            <img src="assets/covers/instagram-post-white-1080x1080.jpg" alt="Insta Post White" class="max-h-[380px] w-auto rounded-lg shadow-md border border-stone-800 hover:scale-[1.01] transition-transform">
+          </div>
+          <div class="p-4 bg-stone-900/40 border-t border-stone-800 flex items-center justify-between gap-3">
+            <span class="text-xs text-stone-400">Clean Architectural Grid Look</span>
+            <a href="assets/covers/instagram-post-white-1080x1080.jpg" download="instagram-post-white-1080x1080.jpg" class="gold-gradient text-[#141619] font-bold text-xs px-4 py-2 rounded-lg shadow flex items-center gap-1.5 hover:opacity-95">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Download Square</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vertical 1080x1920 Stories -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Story Dark -->
+        <div class="bg-[#141619] rounded-2xl border border-stone-800 overflow-hidden shadow-xl flex flex-col justify-between">
+          <div class="p-4 bg-stone-900/60 border-b border-stone-800 flex items-center justify-between">
+            <span class="text-xs uppercase tracking-widest text-[#D5BA8E] font-semibold">Instagram Story / Highlight (Dark)</span>
+            <span class="text-[11px] text-stone-400 bg-black/40 px-2 py-0.5 rounded">1080 × 1920 px (9:16)</span>
+          </div>
+          <div class="p-6 bg-[#0B0D0F] flex items-center justify-center">
+            <img src="assets/covers/instagram-story-dark-1080x1920.jpg" alt="Insta Story Dark" class="max-h-[460px] w-auto rounded-lg shadow-md border border-stone-800 hover:scale-[1.01] transition-transform">
+          </div>
+          <div class="p-4 bg-stone-900/40 border-t border-stone-800 flex items-center justify-between gap-3">
+            <span class="text-xs text-stone-400">Story & Highlight Cover</span>
+            <a href="assets/covers/instagram-story-dark-1080x1920.jpg" download="instagram-story-dark-1080x1920.jpg" class="gold-gradient text-[#141619] font-bold text-xs px-4 py-2 rounded-lg shadow flex items-center gap-1.5 hover:opacity-95">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Download Story</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Story White -->
+        <div class="bg-[#141619] rounded-2xl border border-stone-800 overflow-hidden shadow-xl flex flex-col justify-between">
+          <div class="p-4 bg-stone-900/60 border-b border-stone-800 flex items-center justify-between">
+            <span class="text-xs uppercase tracking-widest text-stone-300 font-semibold">Instagram Story / Highlight (White)</span>
+            <span class="text-[11px] text-stone-400 bg-black/40 px-2 py-0.5 rounded">1080 × 1920 px (9:16)</span>
+          </div>
+          <div class="p-6 bg-[#0B0D0F] flex items-center justify-center">
+            <img src="assets/covers/instagram-story-white-1080x1920.jpg" alt="Insta Story White" class="max-h-[460px] w-auto rounded-lg shadow-md border border-stone-800 hover:scale-[1.01] transition-transform">
+          </div>
+          <div class="p-4 bg-stone-900/40 border-t border-stone-800 flex items-center justify-between gap-3">
+            <span class="text-xs text-stone-400">Story & Highlight Cover</span>
+            <a href="assets/covers/instagram-story-white-1080x1920.jpg" download="instagram-story-white-1080x1920.jpg" class="gold-gradient text-[#141619] font-bold text-xs px-4 py-2 rounded-lg shadow flex items-center gap-1.5 hover:opacity-95">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Download Story</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#141619] border-t border-stone-800 py-6 px-4 text-center text-xs text-stone-400">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-white font-semibold">Khoraniya Prime Properties</span>
+        <span>• Invest. Own. Prosper.</span>
+      </div>
+      <div>
+        <span>Direct Inquiries: <a href="tel:+917689932586" class="text-[#D5BA8E] font-semibold hover:underline">+91 7689932586</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function filterCovers(platform) {
+      // Update buttons
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('gold-gradient', 'text-[#141619]', 'shadow');
+        btn.classList.add('text-stone-400');
+      });
+      const activeBtn = document.getElementById('btn-' + platform);
+      if (activeBtn) {
+        activeBtn.classList.remove('text-stone-400');
+        activeBtn.classList.add('gold-gradient', 'text-[#141619]', 'shadow');
+      }
+
+      // Filter cards
+      document.querySelectorAll('.cover-card').forEach(card => {
+        if (platform === 'all' || card.getAttribute('data-platform') === platform) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
