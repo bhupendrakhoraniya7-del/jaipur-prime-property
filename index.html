@@ -330,24 +330,28 @@
       </p>
     </div>
 
-    <!-- 3 Property Cards Grid -->
-    <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- 2 Featured Property Cards Grid -->
+    <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
       
-      <!-- Card 1: Prime Commercial Avenue -->
-      <div class="property-card bg-white rounded-lg overflow-hidden flex flex-col justify-between">
+      <!-- Card 1: Chart Knowledge Park -->
+      <div class="property-card bg-white rounded-xl overflow-hidden flex flex-col justify-between border border-[#E7E0D5] hover:shadow-lg transition-all duration-300">
         <div>
-          <div class="relative h-60 overflow-hidden bg-stone-100">
+          <div class="relative h-64 overflow-hidden bg-stone-900 group cursor-pointer" onclick="openPropertyModal('prop-1789803364773')">
             <img 
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
-              alt="Prime Commercial Avenue - Commercial Plot in Jaipur" 
-              class="property-img w-full h-full object-cover"
+              src="assets/images/property-prop-1789803364773.jpg" 
+              alt="Chart Knowledge Park - Commercial Plot in Jaipur" 
+              class="property-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
             >
             <div class="absolute top-3 left-3 bg-[#141619]/90 text-[#D5BA8E] text-[11px] font-semibold tracking-wider uppercase px-3 py-1 rounded backdrop-blur-sm">
-              Commercial Plot
+              Residential & Commercial Plots
             </div>
-            <div class="absolute bottom-3 right-3 bg-white/95 text-[#141619] text-xs font-bold px-3 py-1 rounded shadow-sm">
-              2,000 sq. ft.
+            <div class="absolute top-3 right-3 bg-black/80 backdrop-blur-sm text-white text-[11px] font-bold px-2.5 py-1 rounded flex items-center gap-1.5 shadow">
+              <svg class="w-3.5 h-3.5 text-[#D5BA8E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <span>6 Photos</span>
+            </div>
+            <div class="absolute bottom-3 left-3 bg-blue-900/90 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded shadow flex items-center gap-1">
+              <span>🗺️ Road Map Attached</span>
             </div>
           </div>
           
@@ -356,41 +360,50 @@
               <svg class="w-3.5 h-3.5 text-[#A8885B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
               </svg>
-              <span>Jaipur, Rajasthan</span>
+              <span>opposite knowledge city , Diggi road , Jaipur</span>
             </div>
-            <h3 class="font-serif text-2xl font-bold text-[#141619] mb-2">Prime Commercial Avenue</h3>
-            <p class="text-xs text-[#A8885B] font-semibold uppercase tracking-wider mb-4">
-              Strategic location | High-growth corridor
+            <h3 class="font-serif text-2xl font-bold text-[#141619] mb-1">Chart Knowledge Park</h3>
+            <p class="text-xs text-[#A8885B] font-semibold uppercase tracking-wider mb-3">
+              Located in opposite knowledge city , diggi road , jaipur
             </p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="text-[11px] bg-stone-100 text-stone-700 px-2 py-0.5 rounded font-medium">100 gaj</span>
+              <span class="text-[11px] bg-stone-100 text-stone-700 px-2 py-0.5 rounded font-medium">150gaj</span>
+              <span class="text-[11px] bg-stone-100 text-stone-700 px-2 py-0.5 rounded font-medium">200gaj</span>
+            </div>
             <p class="text-xs sm:text-[13px] text-[#555E68] line-clamp-2 leading-relaxed">
-              Carefully chosen commercial plot on an arterial sector road offering high footfall, verified frontage, and immense retail appreciation potential.
+              residential plot rate 27,950rupees , commercial plot rate 47,000 rupees. 300 Bigha Mega Township with 200 Ft. Main Road.
             </p>
           </div>
         </div>
 
-        <div class="p-6 pt-0 border-t border-[#E7E0D5]/60 mt-4 flex items-center justify-between">
-          <span class="text-[11px] uppercase tracking-wider text-[#555E68]">Plot Spec: Available</span>
-          <button onclick="openPropertyModal('prop-1')" class="btn-outline-gold px-4 py-2 rounded text-xs uppercase tracking-wider font-semibold">
+        <div class="p-6 pt-0 border-t border-[#E7E0D5]/60 mt-2 flex items-center justify-between">
+          <span class="text-[11px] uppercase tracking-wider text-[#555E68]">Immediate / Registry Ready</span>
+          <button onclick="openPropertyModal('prop-1789803364773')" class="btn-outline-gold px-4 py-2 rounded text-xs uppercase tracking-wider font-semibold">
             View Details
           </button>
         </div>
       </div>
 
-      <!-- Card 2: Prime Business District -->
-      <div class="property-card bg-white rounded-lg overflow-hidden flex flex-col justify-between">
+      <!-- Card 2: Chart Nexara -->
+      <div class="property-card bg-white rounded-xl overflow-hidden flex flex-col justify-between border border-[#E7E0D5] hover:shadow-lg transition-all duration-300">
         <div>
-          <div class="relative h-60 overflow-hidden bg-stone-100">
+          <div class="relative h-64 overflow-hidden bg-stone-900 group cursor-pointer" onclick="openPropertyModal('prop-1789795429112')">
             <img 
-              src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80" 
-              alt="Prime Business District - Commercial Plot in Jaipur" 
-              class="property-img w-full h-full object-cover"
+              src="assets/images/property-prop-1789795429112.jpg" 
+              alt="Chart Nexara - Commercial Plot in Jaipur" 
+              class="property-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
             >
             <div class="absolute top-3 left-3 bg-[#141619]/90 text-[#D5BA8E] text-[11px] font-semibold tracking-wider uppercase px-3 py-1 rounded backdrop-blur-sm">
-              Commercial Plot
+              Residential & Commercial Plots
             </div>
-            <div class="absolute bottom-3 right-3 bg-white/95 text-[#141619] text-xs font-bold px-3 py-1 rounded shadow-sm">
-              3,500 sq. ft.
+            <div class="absolute top-3 right-3 bg-black/80 backdrop-blur-sm text-white text-[11px] font-bold px-2.5 py-1 rounded flex items-center gap-1.5 shadow">
+              <svg class="w-3.5 h-3.5 text-[#D5BA8E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <span>15 Photos</span>
+            </div>
+            <div class="absolute bottom-3 left-3 bg-blue-900/90 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded shadow flex items-center gap-1">
+              <span>🗺️ Road Map Attached</span>
             </div>
           </div>
           
@@ -399,64 +412,26 @@
               <svg class="w-3.5 h-3.5 text-[#A8885B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
               </svg>
-              <span>Jaipur, Rajasthan</span>
+              <span>Mahindra world city , Ajmer road , Jaipur</span>
             </div>
-            <h3 class="font-serif text-2xl font-bold text-[#141619] mb-2">Prime Business District</h3>
-            <p class="text-xs text-[#A8885B] font-semibold uppercase tracking-wider mb-4">
-              Excellent connectivity | Investment potential
+            <h3 class="font-serif text-2xl font-bold text-[#141619] mb-1">Chart Nexara</h3>
+            <p class="text-xs text-[#A8885B] font-semibold uppercase tracking-wider mb-3">
+              Located in Mahindra World City (India's Largest SEZ)
             </p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="text-[11px] bg-stone-100 text-stone-700 px-2 py-0.5 rounded font-medium">100 gaj</span>
+              <span class="text-[11px] bg-stone-100 text-stone-700 px-2 py-0.5 rounded font-medium">150gaj</span>
+              <span class="text-[11px] bg-stone-100 text-stone-700 px-2 py-0.5 rounded font-medium">200gaj</span>
+            </div>
             <p class="text-xs sm:text-[13px] text-[#555E68] line-clamp-2 leading-relaxed">
-              Prime commercial real estate plot positioned in a flourishing corporate and retail zone with dual-road accessibility and strong long-term yields.
+              residential plot rate 34,950rupees , commercial plot rate 47000 rupees. 200 Bigha Premium Township, JDA & RERA Approved.
             </p>
           </div>
         </div>
 
-        <div class="p-6 pt-0 border-t border-[#E7E0D5]/60 mt-4 flex items-center justify-between">
-          <span class="text-[11px] uppercase tracking-wider text-[#555E68]">Plot Spec: Available</span>
-          <button onclick="openPropertyModal('prop-2')" class="btn-outline-gold px-4 py-2 rounded text-xs uppercase tracking-wider font-semibold">
-            View Details
-          </button>
-        </div>
-      </div>
-
-      <!-- Card 3: Prime Investment Enclave -->
-      <div class="property-card bg-white rounded-lg overflow-hidden flex flex-col justify-between">
-        <div>
-          <div class="relative h-60 overflow-hidden bg-stone-100">
-            <img 
-              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" 
-              alt="Prime Investment Enclave - Commercial Plot in Jaipur" 
-              class="property-img w-full h-full object-cover"
-              loading="lazy"
-            >
-            <div class="absolute top-3 left-3 bg-[#141619]/90 text-[#D5BA8E] text-[11px] font-semibold tracking-wider uppercase px-3 py-1 rounded backdrop-blur-sm">
-              Commercial Plot
-            </div>
-            <div class="absolute bottom-3 right-3 bg-white/95 text-[#141619] text-xs font-bold px-3 py-1 rounded shadow-sm">
-              5,000 sq. ft.
-            </div>
-          </div>
-          
-          <div class="p-6">
-            <div class="flex items-center gap-1.5 text-xs text-[#555E68] mb-1.5">
-              <svg class="w-3.5 h-3.5 text-[#A8885B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-              </svg>
-              <span>Jaipur, Rajasthan</span>
-            </div>
-            <h3 class="font-serif text-2xl font-bold text-[#141619] mb-2">Prime Investment Enclave</h3>
-            <p class="text-xs text-[#A8885B] font-semibold uppercase tracking-wider mb-4">
-              Growth-focused location | Commercial potential
-            </p>
-            <p class="text-xs sm:text-[13px] text-[#555E68] line-clamp-2 leading-relaxed">
-              Expansive plot ideal for flagship commercial developments, corporate offices, or strategic land-banking along Jaipur's major development spine.
-            </p>
-          </div>
-        </div>
-
-        <div class="p-6 pt-0 border-t border-[#E7E0D5]/60 mt-4 flex items-center justify-between">
-          <span class="text-[11px] uppercase tracking-wider text-[#555E68]">Plot Spec: Available</span>
-          <button onclick="openPropertyModal('prop-3')" class="btn-outline-gold px-4 py-2 rounded text-xs uppercase tracking-wider font-semibold">
+        <div class="p-6 pt-0 border-t border-[#E7E0D5]/60 mt-2 flex items-center justify-between">
+          <span class="text-[11px] uppercase tracking-wider text-[#555E68]">Immediate / Registry Ready</span>
+          <button onclick="openPropertyModal('prop-1789795429112')" class="btn-outline-gold px-4 py-2 rounded text-xs uppercase tracking-wider font-semibold">
             View Details
           </button>
         </div>
@@ -1064,13 +1039,10 @@
               name="property"
               class="w-full px-4 py-3 rounded border border-[#E7E0D5] bg-[#FAF8F5] text-sm text-[#141619] focus:bg-white transition-colors"
             >
-              <option value="">Select Category / Plot</option>
-              <option value="Prime Commercial Avenue">Prime Commercial Avenue (2,000 sq. ft.)</option>
-              <option value="Prime Business District">Prime Business District (3,500 sq. ft.)</option>
-              <option value="Prime Investment Enclave">Prime Investment Enclave (5,000 sq. ft.)</option>
-              <option value="Commercial Land Banking">Long-Term Commercial Land Banking</option>
-              <option value="Retail Showroom Plot">Retail / Showroom Plot</option>
-              <option value="Other Commercial">Other Commercial Requirement</option>
+              <option value="">Select Township / Plot</option>
+              <option value="Chart Knowledge Park">Chart Knowledge Park (Diggi Road, Jaipur)</option>
+              <option value="Chart Nexara">Chart Nexara (Mahindra World City, Jaipur)</option>
+              <option value="Other Commercial">Other Commercial / Residential Requirement</option>
             </select>
           </div>
 
@@ -1498,7 +1470,7 @@
   </div>
 
   <!-- Custom Scripts -->
-  <script src="assets/js/main.js?v=20260928_v2"></script>
+  <script src="assets/js/main.js?v=20260928_v3"></script>
 
 </body>
 </html>

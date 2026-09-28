@@ -14,100 +14,77 @@ const defaultSiteData = {
   },
   properties: [
     {
-      id: "prop-1",
-      title: "Chart Nexara",
+      id: "prop-1789803364773",
+      title: "chart knowledge park",
+      location: "opposite knowledge city , Diggi road , Jaipur",
+      rate: "residential plot rate 27,950rupees , commercial plot rate 47,000 rupees",
+      sizes: ["100 gaj", "150gaj", "200gaj"],
+      size: "100 gaj – 200gaj",
+      type: "Residential plot and commercial plot",
+      tagline: "Located in opposite knowledge city , diggi road , jaipur",
+      frontage: "200ft. , 60ft. , 40ft. wide road",
+      zoning: "commercial",
+      possession: "Immediate / Registry Ready",
+      image: "assets/images/property-prop-1789803364773.jpg",
+      gallery: [
+        "assets/images/gallery-prop-1789803364773-1.jpg",
+        "assets/images/gallery-prop-1789803364773-2.jpg",
+        "assets/images/gallery-prop-1789803364773-3.jpg",
+        "assets/images/gallery-prop-1789803364773-4.jpg",
+        "assets/images/gallery-prop-1789803364773-5.jpg",
+        "assets/images/gallery-prop-1789803364773-6.jpg"
+      ],
+      roadmap: {
+        type: "pdf",
+        url: "assets/docs/THE-CHART-NEXARA-M-.pdf",
+        title: "Marketing Map - Chart Knowledge Park.pdf"
+      },
+      description: "A Mega Investment Destination\n\nOpposite Knowledge City, Diggi Road, Jaipur\n\n🏡 300 Bigha Mega Township\n\n✅ Premium Residential Township\n✅ Excellent Location with High Growth Potential\n✅ Planned Modern Infrastructure\n\n🛣️ Wide Roads\n\n* 200 Ft. Main Road\n* 60 Ft. Internal Roads\n* 40 Ft. Internal Roads\n\n🌟 Premium Amenities\n\n🏊 Swimming Pool\n🏛️ Grand Club House\n🏢 Community Hall\n🌳 Landscaped Parks\n🛕 Temple (Mandir)\n🏃 Open Green Spaces & Modern Township Planning\n\n📈 Why Invest Here?\n\n✔️ Rapidly Developing Location\n✔️ Opposite Knowledge City, Diggi Road\n✔️ Strong Future Growth & Appreciation Potential\n✔️ Excellent Connectivity & Planned Infrastructure\n✔️ Ideal for Investment as well as Dream Home\n✔️ High Demand Area with Long-Term Value\n\n🌆 Future Development Highlights\n\n✨ Education & Institutional Hub\n✨ Expanding Road Network & Connectivity\n✨ Fast Urban Development\n✨ Excellent Investment Opportunity with Strong Appreciation Potential",
+      highlights: [
+        "knowledge city , diggi road , jaipur",
+        "200 ft main road and 60ft , 40ft internal road"
+      ]
+    },
+    {
+      id: "prop-1789795429112",
+      title: "chart nexara",
       location: "Mahindra world city , Ajmer road , Jaipur",
-      tagline: "LOCATED IN MAHINDRA WORLD CITY (INDIA'S LARGEST SEZ)",
-      rate: "residential plot rate 34,950rupees , commercial plot rate 47000",
       size: "100 gaj – 200gaj",
       sizes: ["100 gaj", "150gaj", "200gaj"],
-      type: "Commercial & Residential Plots",
-      frontage: "60 Ft. Wide Sector Road Frontage",
-      zoning: "Commercial / Residential / SEZ Zone",
+      type: "Residential plot and commercial plot",
+      tagline: "Located in Mahindra World City (India's Largest SEZ)",
+      frontage: "250ft. , 100ft. , 60ft. , 40ft. wide road",
+      zoning: "commercial",
       possession: "Immediate / Registry Ready",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      image: "assets/images/property-prop-1789795429112.jpg",
+      description: "CHART NEXARA\n\nMahindra World City, Jaipur\n\n✨ A Golden Opportunity to Invest in the Future! ✨\n\n🏡 200 Bigha Premium Township✅ JDA Approved✅ RERA Approved\n\nPrime Connectivity\n\n🛣️ 250 Ft Main Road🛣️ 100 Ft Roads🛣️ 60 Ft Roads🛣️ 40 Ft Roads\n\nWorld-Class Amenities\n\nWorld-Class Amenities\n\n🏊 Swimming Pool🏛️ Grand Club House🏢 Community Hall🌳 Landscaped Parks🛕 Temple💪 Open Gym🎭 Open Recreational Spaces🌿 Premium Infrastructure & Best Development\n\nWhy CHART NEXARA?\n\n⭐ Located in Mahindra World City (India's Largest SEZ)⭐ 100+ National & International Companies Already Operational⭐ Future-Ready & High-Demand Residential Township⭐ Wide Roads, Planned Development & Well-Maintained Colony⭐ Excellent Investment & Residential Destination\n\nNearby Landmarks\n\n📍 Nizamuddin School📍 Bharatiya Skill Development University📍 JK Lakshmipat University📍 Jayshree Periwal School📍 Banking Sector📍 IT Hub📍 John Deere📍 Domestic Park📍 Flipkart Warehouse📍 D-Mart Warehouse\n\n📈 High Growth Location | High Appreciation Potential | Smart Investment\n\nBook Your Plot Today and Secure Your Future!\n\nCHART NEXARA – Where Your Dream Meets the Future.\n\nWhy CHART NEXARA?\n\n⭐ Located in Mahindra World City (India's Largest SEZ)⭐ 100+ National & International Companies Already Operational⭐ Future-Ready & High-Demand Residential Township⭐ Wide Roads, Planned Development & Well-Maintained Colony⭐ Excellent Investment & Residential Destination\n\nNearby Landmarks\n\n📍 Neeraj Modi School📍 Bharatiya Skill Development University📍 JK Lakshmipat University📍 Jayshree Periwal School📍 Banking Sector📍 IT Hub📍 Flipkart Warehouse📍 D-Mart Warehouse\n\n📈 High Growth Location | High Appreciation Potential | Smart Investment\n\nBook Your Plot Today and Secure Your Future!\n\nCHART NEXARA – Where Your Dream Meets the Future.",
+      highlights: [
+        "📈 High Growth Location | High Appreciation Potential | Smart Investment",
+        "Mahindra World City, Ajmer road , Jaipur"
+      ],
+      rate: "residential plot rate 34,950rupees , commercial plot rate 47000 rupees",
       gallery: [
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80"
+        "assets/images/gallery-prop-1789795429112-1.jpg",
+        "assets/images/gallery-prop-1789795429112-2.jpg",
+        "assets/images/gallery-prop-1789795429112-3.jpg",
+        "assets/images/gallery-prop-1789795429112-4.jpg",
+        "assets/images/gallery-prop-1789795429112-5.jpg",
+        "assets/images/gallery-prop-1789795429112-6.jpg",
+        "assets/images/gallery-prop-1789795429112-7.jpg",
+        "assets/images/gallery-prop-1789795429112-8.jpg",
+        "assets/images/gallery-prop-1789795429112-9.jpg",
+        "assets/images/gallery-prop-1789795429112-10.jpg",
+        "assets/images/gallery-prop-1789795429112-11.jpg",
+        "assets/images/gallery-prop-1789795429112-12.jpg",
+        "assets/images/gallery-prop-1789795429112-13.jpg",
+        "assets/images/gallery-prop-1789795429112-14.jpg",
+        "assets/images/gallery-prop-1789795429112-15.jpg"
       ],
       roadmap: {
         type: "pdf",
         url: "assets/docs/THE-CHART-NEXARA-M-.pdf",
         title: "THE CHART NEXARA-M-.pdf"
-      },
-      description: "CHART NEXARA Mahindra World City, Jaipur ✨ A Golden Opportunity to Invest in the Future! ✨ 🏡 200+ commercial and residential investment plots with direct highway connectivity.",
-      highlights: [
-        "📈 High Growth Location | High Appreciation Potential | Smart Investment",
-        "Mahindra World City, Ajmer road , Jaipur",
-        "Located in Mahindra World City (India's Largest SEZ)",
-        "Official Demarcation & Sector Road Layout Plan Attached (PDF)"
-      ]
-    },
-    {
-      id: "prop-2",
-      title: "Prime Business District",
-      location: "JLN Marg / Malviya Nagar, Jaipur",
-      tagline: "Excellent connectivity | Investment potential",
-      rate: "₹68,000 / sq. yd",
-      size: "200 – 750 sq. yd",
-      sizes: ["200 sq. yd", "300 sq. yd", "500 sq. yd", "750 sq. yd"],
-      type: "Commercial Plot (High-Density)",
-      frontage: "80 Ft. Master Plan Arterial",
-      zoning: "Corporate & Mixed Commercial Use",
-      possession: "Ready for Development",
-      image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80",
-      gallery: [
-        "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"
-      ],
-      roadmap: {
-        type: "image",
-        url: "https://images.unsplash.com/photo-1524813686514-a57563d77d66?auto=format&fit=crop&w=1200&q=80",
-        title: "80 Ft. Arterial Layout & Sector Plan"
-      },
-      description: "A prestigious commercial plot cluster located in Jaipur’s high-density business cluster, offering rapid transit connectivity, robust underground utility provisions, and superior rental yield prospects for commercial developers.",
-      highlights: [
-        "Proximity to major ring corridors and established corporate nodes",
-        "Dual-side accessibility supporting efficient logistics and customer parking",
-        "High anticipated appreciation index backed by municipal infrastructure",
-        "Zoned for corporate offices, diagnostic centers, or hospitality ventures"
-      ]
-    },
-    {
-      id: "prop-3",
-      title: "Prime Investment Enclave",
-      location: "Tonk Road Growth Axis, Jaipur",
-      tagline: "Growth-focused location | Commercial potential",
-      rate: "₹52,000 / sq. yd",
-      size: "300 – 1,200 sq. yd",
-      sizes: ["300 sq. yd", "500 sq. yd", "800 sq. yd", "1,200 sq. yd"],
-      type: "Commercial Plot (Flagship Scale)",
-      frontage: "100 Ft. Main Growth Corridor",
-      zoning: "Anchor Commercial / Showroom / Institution",
-      possession: "Strategic Investment Holding",
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
-      gallery: [
-        "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80"
-      ],
-      roadmap: {
-        type: "image",
-        url: "https://images.unsplash.com/photo-1524813686514-a57563d77d66?auto=format&fit=crop&w=1200&q=80",
-        title: "100 Ft. Highway Corridor Master Plan"
-      },
-      description: "An expansive prime plot layout tailored for marquee commercial developments, flagship automotive/retail showrooms, or long-term institutional land-banking in Jaipur’s most promising growth zone.",
-      highlights: [
-        "Generous 100-foot frontage allowing magnificent architectural elevation",
-        "Exceptional transit linkages connecting the airport and regional expressways",
-        "Surrounded by premium upcoming residential catchments driving local commerce",
-        "Unmatched land asset for legacy investors and high-net-worth portfolios"
-      ]
+      }
     }
   ]
 };
@@ -214,50 +191,46 @@ async function loadSiteData() {
         try { localStorage.setItem('khoraniya_site_data', JSON.stringify(cachedData)); } catch(e) {}
       }
 
-      const propMap = new Map();
-      
-      // 1. Add server properties
-      if (serverData && Array.isArray(serverData.properties)) {
-        serverData.properties.forEach(p => {
-          if (p && p.id) propMap.set(p.id, p);
-        });
-      }
-      
-      // 2. Add cached properties
-      if (cachedData && Array.isArray(cachedData.properties)) {
-        cachedData.properties.forEach(p => {
-          if (p && p.id && !propMap.has(p.id)) propMap.set(p.id, p);
-        });
-      }
+      // Blacklist of obsolete dummy template properties
+      const DUMMY_IDS = ['prop-1', 'prop-2', 'prop-3'];
 
-      // 3. Add IDB properties (IDB has user's latest edits on this browser)
+      // Purge dummy properties from idb and local storage once and for all
       if (idbData && Array.isArray(idbData.properties)) {
-        const idbTime = Number(idbData.updatedAt || 0);
-        const serverTime = Number(serverData?.updatedAt || 0);
-        
-        if (idbTime > serverTime && idbData.properties.length < propMap.size) {
-          // User explicitly deleted a project in IDB
-          propMap.clear();
-          idbData.properties.forEach(p => { if (p && p.id) propMap.set(p.id, p); });
-        } else {
-          // Merge / update properties with IDB versions
-          idbData.properties.forEach(p => {
-            if (p && p.id) propMap.set(p.id, p);
-          });
+        const cleanProps = idbData.properties.filter(p => p && p.id && !DUMMY_IDS.includes(p.id));
+        if (cleanProps.length !== idbData.properties.length) {
+          idbData.properties = cleanProps;
+          saveToIndexedDB('site_data', idbData).catch(() => {});
+        }
+      }
+      if (cachedData && Array.isArray(cachedData.properties)) {
+        const cleanProps = cachedData.properties.filter(p => p && p.id && !DUMMY_IDS.includes(p.id));
+        if (cleanProps.length !== cachedData.properties.length) {
+          cachedData.properties = cleanProps;
+          try { localStorage.setItem('khoraniya_site_data', JSON.stringify(cachedData)); } catch(e) {}
         }
       }
 
-      const allProps = Array.from(propMap.values());
-
-      if (allProps.length > 0) {
-        window.currentSiteData = {
-          contact: baseContact,
-          properties: allProps,
-          updatedAt: Math.max(Number(serverData?.updatedAt || 0), Number(idbData?.updatedAt || 0))
-        };
+      let allProps = [];
+      // If serverData exists and has properties, that's the authoritative live list!
+      if (serverData && Array.isArray(serverData.properties) && serverData.properties.length > 0) {
+        allProps = serverData.properties.filter(p => p && p.id && !DUMMY_IDS.includes(p.id));
+      } else if (idbData && Array.isArray(idbData.properties) && idbData.properties.length > 0) {
+        allProps = idbData.properties.filter(p => p && p.id && !DUMMY_IDS.includes(p.id));
+      } else if (cachedData && Array.isArray(cachedData.properties) && cachedData.properties.length > 0) {
+        allProps = cachedData.properties.filter(p => p && p.id && !DUMMY_IDS.includes(p.id));
       } else {
-        window.currentSiteData = serverData || idbData || cachedData || defaultSiteData;
+        allProps = defaultSiteData.properties;
       }
+
+      if (allProps.length === 0) {
+        allProps = defaultSiteData.properties;
+      }
+
+      window.currentSiteData = {
+        contact: baseContact,
+        properties: allProps,
+        updatedAt: Math.max(Number(serverData?.updatedAt || 0), Number(idbData?.updatedAt || 0))
+      };
     } else {
       window.currentSiteData = defaultSiteData;
     }

@@ -673,48 +673,64 @@
     }
 
     async function loadData() {
-      // 1. Try IndexedDB first (contains latest full-res images & PDFs)
-      const idbData = await getFromIndexedDB('site_data');
-      if (idbData && idbData.properties && idbData.properties.length > 0) {
-        siteData = idbData;
-        if (!siteData.contact) siteData.contact = {};
-        if (!siteData.contact.email || siteData.contact.email === 'enquiry@khoraniyaprime.com') {
-          siteData.contact.email = 'khoraniyaprimeproperties@gmail.com';
-          await saveLocalData();
+      const DUMMY_IDS = ['prop-1', 'prop-2', 'prop-3'];
+
+      // 1. Fetch official site-data.json from server first
+      let serverData = null;
+      try {
+        const res = await fetch('assets/data/site-data.json?t=' + Date.now());
+        if (res.ok) {
+          serverData = await res.json();
+          if (serverData && Array.isArray(serverData.properties)) {
+            serverData.properties = serverData.properties.filter(p => p && p.id && !DUMMY_IDS.includes(p.id));
+          }
         }
-        return;
+      } catch (err) {
+        console.warn('Failed to load server JSON:', err);
       }
 
-      // 2. Try localStorage
+      // 2. Try IndexedDB
+      const idbData = await getFromIndexedDB('site_data');
+      if (idbData && Array.isArray(idbData.properties)) {
+        idbData.properties = idbData.properties.filter(p => p && p.id && !DUMMY_IDS.includes(p.id));
+      }
+
+      // 3. Try localStorage
       const localData = localStorage.getItem('khoraniya_site_data');
+      let parsedLocal = null;
       if (localData) {
         try {
-          const parsed = JSON.parse(localData);
-          if (parsed && parsed.properties && parsed.properties.length > 0) {
-            siteData = parsed;
-            if (!siteData.contact) siteData.contact = {};
-            if (!siteData.contact.email || siteData.contact.email === 'enquiry@khoraniyaprime.com') {
-              siteData.contact.email = 'khoraniyaprimeproperties@gmail.com';
-              await saveLocalData();
-            }
-            return;
+          parsedLocal = JSON.parse(localData);
+          if (parsedLocal && Array.isArray(parsedLocal.properties)) {
+            parsedLocal.properties = parsedLocal.properties.filter(p => p && p.id && !DUMMY_IDS.includes(p.id));
           }
         } catch (e) {}
       }
 
-      // 3. Fallback to site-data.json
-      try {
-        const res = await fetch('assets/data/site-data.json?t=' + Date.now());
-        if (res.ok) {
-          siteData = await res.json();
-          if (!siteData.contact) siteData.contact = {};
-          if (!siteData.contact.email || siteData.contact.email === 'enquiry@khoraniyaprime.com') {
-            siteData.contact.email = 'khoraniyaprimeproperties@gmail.com';
-          }
-          await saveLocalData();
+      // Compare timestamps
+      const idbTime = Number(idbData?.updatedAt || 0);
+      const serverTime = Number(serverData?.updatedAt || 0);
+
+      if (idbData && idbData.properties && idbData.properties.length > 0 && idbTime > serverTime) {
+        siteData = idbData;
+      } else if (serverData && serverData.properties && serverData.properties.length > 0) {
+        siteData = serverData;
+      } else if (idbData && idbData.properties && idbData.properties.length > 0) {
+        siteData = idbData;
+      } else if (parsedLocal && parsedLocal.properties && parsedLocal.properties.length > 0) {
+        siteData = parsedLocal;
+      }
+
+      if (!siteData && serverData) {
+        siteData = serverData;
+      }
+
+      if (siteData) {
+        if (!siteData.contact) siteData.contact = {};
+        if (!siteData.contact.email || siteData.contact.email === 'enquiry@khoraniyaprime.com') {
+          siteData.contact.email = 'khoraniyaprimeproperties@gmail.com';
         }
-      } catch (err) {
-        console.error('Failed to load JSON:', err);
+        await saveLocalData();
       }
     }
 
