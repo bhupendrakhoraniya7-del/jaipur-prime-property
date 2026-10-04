@@ -6,7 +6,7 @@ $listener = New-Object System.Net.HttpListener
 $listener.Prefixes.Add("http://localhost:$port/")
 $listener.Start()
 
-Write-Host "Khoraniya Prime Properties Server running at http://localhost:$port/"
+Write-Host "Jaipur Prime Property Server running at http://localhost:$port/"
 
 $mimeTypes = @{
     ".html" = "text/html; charset=utf-8"

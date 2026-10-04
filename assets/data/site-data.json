@@ -1,11 +1,11 @@
-﻿{
+{
     "contact":  {
                     "phone":  "7689932586",
                     "rawPhone":  "7689932586",
                     "whatsapp":  "7689932586",
-                    "email":  "khoraniyaprimeproperties@gmail.com",
+                    "email":  "jaipurprimeproperty@gmail.com",
                     "address":  "Jaipur, Rajasthan 302001",
-                    "tagline":  "Invest. Own. Prosper."
+                    "tagline":  "JPP • Invest. Own. Prosper."
                 },
     "properties":  [
                        {
@@ -90,5 +90,5 @@
                                        }
                        }
                    ],
-    "updatedAt":  1790593424612
+    "updatedAt":  1791110999999
 }

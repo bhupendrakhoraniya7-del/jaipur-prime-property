@@ -101,13 +101,13 @@ function Generate-FacebookCoverDark {
     }
 
     # Brand Title
-    $fontKhoraniya = New-Object System.Drawing.Font("Georgia", 40, [System.Drawing.FontStyle]::Bold)
+    $fontJaipur = New-Object System.Drawing.Font("Georgia", 40, [System.Drawing.FontStyle]::Bold)
     $brushWhiteText = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(245, 242, 236))
-    Draw-SpacedText $gfx "KHORANIYA" $fontKhoraniya $brushWhiteText 330 110 6 "Left"
+    Draw-SpacedText $gfx "JAIPUR" $fontJaipur $brushWhiteText 330 110 6 "Left"
 
     $fontPrime = New-Object System.Drawing.Font("Century Gothic", 30, [System.Drawing.FontStyle]::Bold)
     $brushGold = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(213, 186, 142))
-    Draw-SpacedText $gfx "PRIME PROPERTIES" $fontPrime $brushGold 330 175 4 "Left"
+    Draw-SpacedText $gfx "PRIME PROPERTY" $fontPrime $brushGold 330 175 4 "Left"
 
     # Accent underline
     $penGoldThick = New-Object System.Drawing.Pen($brushGold, 2.0)
@@ -181,7 +181,7 @@ function Generate-FacebookCoverDark {
 
     $fontWeb = New-Object System.Drawing.Font("Century Gothic", 13, [System.Drawing.FontStyle]::Bold)
     $brushWeb = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(180, 160, 130))
-    Draw-SpacedText $gfx "WWW.KHORANIYAPRIMEPROPERTIES.COM" $fontWeb $brushWeb 95 480 3 "Left"
+    Draw-SpacedText $gfx "WWW.JAIPURPRIMEPROPERTY.COM" $fontWeb $brushWeb 95 480 3 "Left"
 
     $gfx.Flush(); $gfx.Dispose()
 
@@ -230,13 +230,13 @@ function Generate-FacebookCoverWhite {
         $emblem.Dispose()
     }
 
-    $fontKhoraniya = New-Object System.Drawing.Font("Georgia", 40, [System.Drawing.FontStyle]::Bold)
+    $fontJaipur = New-Object System.Drawing.Font("Georgia", 40, [System.Drawing.FontStyle]::Bold)
     $brushSlate = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(55, 65, 81))
-    Draw-SpacedText $gfx "KHORANIYA" $fontKhoraniya $brushSlate 330 110 6 "Left"
+    Draw-SpacedText $gfx "JAIPUR" $fontJaipur $brushSlate 330 110 6 "Left"
 
     $fontPrime = New-Object System.Drawing.Font("Century Gothic", 30, [System.Drawing.FontStyle]::Bold)
     $brushGold = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(180, 138, 70))
-    Draw-SpacedText $gfx "PRIME PROPERTIES" $fontPrime $brushGold 330 175 4 "Left"
+    Draw-SpacedText $gfx "PRIME PROPERTY" $fontPrime $brushGold 330 175 4 "Left"
 
     $penGoldThick = New-Object System.Drawing.Pen($brushGold, 2.0)
     $gfx.DrawLine($penGoldThick, 330.0, 225.0, 780.0, 225.0)
@@ -304,7 +304,7 @@ function Generate-FacebookCoverWhite {
 
     $fontWeb = New-Object System.Drawing.Font("Century Gothic", 13, [System.Drawing.FontStyle]::Bold)
     $brushWeb = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(160, 130, 80))
-    Draw-SpacedText $gfx "WWW.KHORANIYAPRIMEPROPERTIES.COM" $fontWeb $brushWeb 95 480 3 "Left"
+    Draw-SpacedText $gfx "WWW.JAIPURPRIMEPROPERTY.COM" $fontWeb $brushWeb 95 480 3 "Left"
 
     $gfx.Flush(); $gfx.Dispose()
 
@@ -350,13 +350,13 @@ function Generate-WhatsAppCoverDark {
         $emblem.Dispose()
     }
 
-    $fontKhoraniya = New-Object System.Drawing.Font("Georgia", 38, [System.Drawing.FontStyle]::Bold)
+    $fontJaipur = New-Object System.Drawing.Font("Georgia", 38, [System.Drawing.FontStyle]::Bold)
     $brushWhite = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(245, 242, 236))
-    Draw-SpacedText $gfx "KHORANIYA" $fontKhoraniya $brushWhite ($w / 2) 250 8 "Center"
+    Draw-SpacedText $gfx "JAIPUR" $fontJaipur $brushWhite ($w / 2) 250 8 "Center"
 
     $fontPrime = New-Object System.Drawing.Font("Century Gothic", 28, [System.Drawing.FontStyle]::Bold)
     $brushGold = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(213, 186, 142))
-    $resP = Draw-SpacedText $gfx "PRIME PROPERTIES" $fontPrime $brushGold ($w / 2) 308 6 "Center"
+    $resP = Draw-SpacedText $gfx "PRIME PROPERTY" $fontPrime $brushGold ($w / 2) 308 6 "Center"
 
     $penGold = New-Object System.Drawing.Pen($brushGold, 2.0)
     $gfx.DrawLine($penGold, [float]($resP.Left - 60), 322.0, [float]($resP.Left - 15), 322.0)
@@ -430,13 +430,13 @@ function Generate-WhatsAppCoverWhite {
         $emblem.Dispose()
     }
 
-    $fontKhoraniya = New-Object System.Drawing.Font("Georgia", 38, [System.Drawing.FontStyle]::Bold)
+    $fontJaipur = New-Object System.Drawing.Font("Georgia", 38, [System.Drawing.FontStyle]::Bold)
     $brushSlate = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(55, 65, 81))
-    Draw-SpacedText $gfx "KHORANIYA" $fontKhoraniya $brushSlate ($w / 2) 250 8 "Center"
+    Draw-SpacedText $gfx "JAIPUR" $fontJaipur $brushSlate ($w / 2) 250 8 "Center"
 
     $fontPrime = New-Object System.Drawing.Font("Century Gothic", 28, [System.Drawing.FontStyle]::Bold)
     $brushGold = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(180, 138, 70))
-    $resP = Draw-SpacedText $gfx "PRIME PROPERTIES" $fontPrime $brushGold ($w / 2) 308 6 "Center"
+    $resP = Draw-SpacedText $gfx "PRIME PROPERTY" $fontPrime $brushGold ($w / 2) 308 6 "Center"
 
     $penGold = New-Object System.Drawing.Pen($brushGold, 2.0)
     $gfx.DrawLine($penGold, [float]($resP.Left - 60), 322.0, [float]($resP.Left - 15), 322.0)
@@ -512,13 +512,13 @@ function Generate-InstagramSquareDark {
         $emblem.Dispose()
     }
 
-    $fontKhoraniya = New-Object System.Drawing.Font("Georgia", 42, [System.Drawing.FontStyle]::Bold)
+    $fontJaipur = New-Object System.Drawing.Font("Georgia", 42, [System.Drawing.FontStyle]::Bold)
     $brushWhite = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(245, 242, 236))
-    Draw-SpacedText $gfx "KHORANIYA" $fontKhoraniya $brushWhite ($w / 2) 365 8 "Center"
+    Draw-SpacedText $gfx "JAIPUR" $fontJaipur $brushWhite ($w / 2) 365 8 "Center"
 
     $fontPrime = New-Object System.Drawing.Font("Century Gothic", 32, [System.Drawing.FontStyle]::Bold)
     $brushGold = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(213, 186, 142))
-    $resP = Draw-SpacedText $gfx "PRIME PROPERTIES" $fontPrime $brushGold ($w / 2) 435 6 "Center"
+    $resP = Draw-SpacedText $gfx "PRIME PROPERTY" $fontPrime $brushGold ($w / 2) 435 6 "Center"
 
     $penGold = New-Object System.Drawing.Pen($brushGold, 2.0)
     $gfx.DrawLine($penGold, [float]($resP.Left - 60), 450.0, [float]($resP.Left - 15), 450.0)
@@ -563,7 +563,7 @@ function Generate-InstagramSquareDark {
 
     $fontFoot = New-Object System.Drawing.Font("Century Gothic", 13, [System.Drawing.FontStyle]::Bold)
     $brushFoot = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(160, 150, 135))
-    Draw-SpacedText $gfx "LOCATION: JAIPUR, RAJASTHAN   -   WWW.KHORANIYAPRIMEPROPERTIES.COM" $fontFoot $brushFoot ($w / 2) 990 3 "Center"
+    Draw-SpacedText $gfx "LOCATION: JAIPUR, RAJASTHAN   -   WWW.JAIPURPRIMEPROPERTY.COM" $fontFoot $brushFoot ($w / 2) 990 3 "Center"
 
     $gfx.Flush(); $gfx.Dispose()
     $outPath = "assets\covers\instagram-post-dark-1080x1080.jpg"
@@ -600,13 +600,13 @@ function Generate-InstagramSquareWhite {
         $emblem.Dispose()
     }
 
-    $fontKhoraniya = New-Object System.Drawing.Font("Georgia", 42, [System.Drawing.FontStyle]::Bold)
+    $fontJaipur = New-Object System.Drawing.Font("Georgia", 42, [System.Drawing.FontStyle]::Bold)
     $brushSlate = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(55, 65, 81))
-    Draw-SpacedText $gfx "KHORANIYA" $fontKhoraniya $brushSlate ($w / 2) 365 8 "Center"
+    Draw-SpacedText $gfx "JAIPUR" $fontJaipur $brushSlate ($w / 2) 365 8 "Center"
 
     $fontPrime = New-Object System.Drawing.Font("Century Gothic", 32, [System.Drawing.FontStyle]::Bold)
     $brushGold = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(180, 138, 70))
-    $resP = Draw-SpacedText $gfx "PRIME PROPERTIES" $fontPrime $brushGold ($w / 2) 435 6 "Center"
+    $resP = Draw-SpacedText $gfx "PRIME PROPERTY" $fontPrime $brushGold ($w / 2) 435 6 "Center"
 
     $penGold = New-Object System.Drawing.Pen($brushGold, 2.0)
     $gfx.DrawLine($penGold, [float]($resP.Left - 60), 450.0, [float]($resP.Left - 15), 450.0)
@@ -651,7 +651,7 @@ function Generate-InstagramSquareWhite {
 
     $fontFoot = New-Object System.Drawing.Font("Century Gothic", 13, [System.Drawing.FontStyle]::Bold)
     $brushFoot = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(140, 125, 105))
-    Draw-SpacedText $gfx "LOCATION: JAIPUR, RAJASTHAN   -   WWW.KHORANIYAPRIMEPROPERTIES.COM" $fontFoot $brushFoot ($w / 2) 990 3 "Center"
+    Draw-SpacedText $gfx "LOCATION: JAIPUR, RAJASTHAN   -   WWW.JAIPURPRIMEPROPERTY.COM" $fontFoot $brushFoot ($w / 2) 990 3 "Center"
 
     $gfx.Flush(); $gfx.Dispose()
     $outPath = "assets\covers\instagram-post-white-1080x1080.jpg"
@@ -686,13 +686,13 @@ function Generate-InstagramStoryDark {
         $emblem.Dispose()
     }
 
-    $fontKhoraniya = New-Object System.Drawing.Font("Georgia", 50, [System.Drawing.FontStyle]::Bold)
+    $fontJaipur = New-Object System.Drawing.Font("Georgia", 50, [System.Drawing.FontStyle]::Bold)
     $brushWhite = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(245, 242, 236))
-    Draw-SpacedText $gfx "KHORANIYA" $fontKhoraniya $brushWhite ($w / 2) 580 8 "Center"
+    Draw-SpacedText $gfx "JAIPUR" $fontJaipur $brushWhite ($w / 2) 580 8 "Center"
 
     $fontPrime = New-Object System.Drawing.Font("Century Gothic", 38, [System.Drawing.FontStyle]::Bold)
     $brushGold = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(213, 186, 142))
-    $resP = Draw-SpacedText $gfx "PRIME PROPERTIES" $fontPrime $brushGold ($w / 2) 660 6 "Center"
+    $resP = Draw-SpacedText $gfx "PRIME PROPERTY" $fontPrime $brushGold ($w / 2) 660 6 "Center"
 
     $penGold = New-Object System.Drawing.Pen($brushGold, 2.5)
     $gfx.DrawLine($penGold, [float]($resP.Left - 70), 680.0, [float]($resP.Left - 18), 680.0)
@@ -755,7 +755,7 @@ function Generate-InstagramStoryDark {
     $fontFoot = New-Object System.Drawing.Font("Century Gothic", 15, [System.Drawing.FontStyle]::Bold)
     $brushFoot = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(170, 160, 145))
     Draw-SpacedText $gfx "Location: Mahindra World City, Ajmer Road, Jaipur" $fontFoot $brushFoot ($w / 2) 1590 2 "Center"
-    Draw-SpacedText $gfx "WWW.KHORANIYAPRIMEPROPERTIES.COM" $fontFoot $brushGold ($w / 2) 1640 4 "Center"
+    Draw-SpacedText $gfx "WWW.JAIPURPRIMEPROPERTY.COM" $fontFoot $brushGold ($w / 2) 1640 4 "Center"
 
     $gfx.Flush(); $gfx.Dispose()
     $outPath = "assets\covers\instagram-story-dark-1080x1920.jpg"
@@ -790,13 +790,13 @@ function Generate-InstagramStoryWhite {
         $emblem.Dispose()
     }
 
-    $fontKhoraniya = New-Object System.Drawing.Font("Georgia", 50, [System.Drawing.FontStyle]::Bold)
+    $fontJaipur = New-Object System.Drawing.Font("Georgia", 50, [System.Drawing.FontStyle]::Bold)
     $brushSlate = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(55, 65, 81))
-    Draw-SpacedText $gfx "KHORANIYA" $fontKhoraniya $brushSlate ($w / 2) 580 8 "Center"
+    Draw-SpacedText $gfx "JAIPUR" $fontJaipur $brushSlate ($w / 2) 580 8 "Center"
 
     $fontPrime = New-Object System.Drawing.Font("Century Gothic", 38, [System.Drawing.FontStyle]::Bold)
     $brushGold = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(180, 138, 70))
-    $resP = Draw-SpacedText $gfx "PRIME PROPERTIES" $fontPrime $brushGold ($w / 2) 660 6 "Center"
+    $resP = Draw-SpacedText $gfx "PRIME PROPERTY" $fontPrime $brushGold ($w / 2) 660 6 "Center"
 
     $penGold = New-Object System.Drawing.Pen($brushGold, 2.5)
     $gfx.DrawLine($penGold, [float]($resP.Left - 70), 680.0, [float]($resP.Left - 18), 680.0)
@@ -859,7 +859,7 @@ function Generate-InstagramStoryWhite {
     $fontFoot = New-Object System.Drawing.Font("Century Gothic", 15, [System.Drawing.FontStyle]::Bold)
     $brushFoot = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(120, 125, 135))
     Draw-SpacedText $gfx "Location: Mahindra World City, Ajmer Road, Jaipur" $fontFoot $brushFoot ($w / 2) 1590 2 "Center"
-    Draw-SpacedText $gfx "WWW.KHORANIYAPRIMEPROPERTIES.COM" $fontFoot $brushGold ($w / 2) 1640 4 "Center"
+    Draw-SpacedText $gfx "WWW.JAIPURPRIMEPROPERTY.COM" $fontFoot $brushGold ($w / 2) 1640 4 "Center"
 
     $gfx.Flush(); $gfx.Dispose()
     $outPath = "assets\covers\instagram-story-white-1080x1920.jpg"

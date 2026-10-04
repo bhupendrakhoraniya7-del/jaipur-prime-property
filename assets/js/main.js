@@ -1,5 +1,5 @@
 /**
- * Khoraniya Prime Properties - Interactive Frontend Script & CMS Data Binding
+ * Jaipur Prime Property - Interactive Frontend Script & CMS Data Binding
  */
 
 // Fallback Default Data in case fetch is blocked (e.g. local file:// protocol)
@@ -8,9 +8,9 @@ const defaultSiteData = {
     phone: "7689932586",
     rawPhone: "7689932586",
     whatsapp: "7689932586",
-    email: "khoraniyaprimeproperties@gmail.com",
+    email: "jaipurprimeproperty@gmail.com",
     address: "Jaipur, Rajasthan 302001",
-    tagline: "Invest. Own. Prosper."
+    tagline: "JPP • Invest. Own. Prosper."
   },
   properties: [
     {
@@ -177,17 +177,17 @@ async function loadSiteData() {
       };
 
       // Strictly sanitize: replace any old placeholder with official email
-      if (!baseContact.email || baseContact.email.trim() === '' || baseContact.email === 'enquiry@khoraniyaprime.com') {
-        baseContact.email = 'khoraniyaprimeproperties@gmail.com';
+      if (!baseContact.email || baseContact.email.trim() === '' || baseContact.email === 'enquiry@khoraniyaprime.com' || baseContact.email === 'khoraniyaprimeproperties@gmail.com') {
+        baseContact.email = 'jaipurprimeproperty@gmail.com';
       }
 
       // Proactively clean up any stale placeholder email in client's local storage & IndexedDB
-      if (idbData && idbData.contact && (idbData.contact.email === 'enquiry@khoraniyaprime.com' || !idbData.contact.email)) {
-        idbData.contact.email = 'khoraniyaprimeproperties@gmail.com';
+      if (idbData && idbData.contact && (idbData.contact.email === 'enquiry@khoraniyaprime.com' || idbData.contact.email === 'khoraniyaprimeproperties@gmail.com' || !idbData.contact.email)) {
+        idbData.contact.email = 'jaipurprimeproperty@gmail.com';
         saveToIndexedDB('site_data', idbData).catch(() => {});
       }
-      if (cachedData && cachedData.contact && (cachedData.contact.email === 'enquiry@khoraniyaprime.com' || !cachedData.contact.email)) {
-        cachedData.contact.email = 'khoraniyaprimeproperties@gmail.com';
+      if (cachedData && cachedData.contact && (cachedData.contact.email === 'enquiry@khoraniyaprime.com' || cachedData.contact.email === 'khoraniyaprimeproperties@gmail.com' || !cachedData.contact.email)) {
+        cachedData.contact.email = 'jaipurprimeproperty@gmail.com';
         try { localStorage.setItem('khoraniya_site_data', JSON.stringify(cachedData)); } catch(e) {}
       }
 
@@ -401,9 +401,9 @@ function bindContactInfo() {
   });
 
   // Email
-  const safeEmail = (contact && contact.email && contact.email !== 'enquiry@khoraniyaprime.com')
+  const safeEmail = (contact && contact.email && contact.email !== 'enquiry@khoraniyaprime.com' && contact.email !== 'khoraniyaprimeproperties@gmail.com')
     ? contact.email.trim()
-    : 'khoraniyaprimeproperties@gmail.com';
+    : 'jaipurprimeproperty@gmail.com';
 
   document.querySelectorAll('[data-bind="email"]').forEach(el => {
     el.textContent = safeEmail;
@@ -768,7 +768,7 @@ function initPropertyModal() {
                   <p class="text-[11px] text-[#555E68]">Official demarcation & road map available on request</p>
                 </div>
               </div>
-              <button type="button" onclick="openWhatsApp('Hello Khoraniya Prime Properties, please share the official sector road map and layout for ${escapeHtml(data.title)}')" class="w-full sm:w-auto px-4 py-2 bg-[#25D366] text-white rounded text-xs font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-1.5 shadow-sm">
+              <button type="button" onclick="openWhatsApp('Hello Jaipur Prime Property, please share the official sector road map and layout for ${escapeHtml(data.title)}')" class="w-full sm:w-auto px-4 py-2 bg-[#25D366] text-white rounded text-xs font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-1.5 shadow-sm">
                 <span>Request Map on WhatsApp</span>
               </button>
             </div>
@@ -932,7 +932,7 @@ function initLeadForm() {
         const rawWa = window.currentSiteData?.contact?.whatsapp || '7689932586';
         const waNum = formatWhatsAppUrlNumber(rawWa);
         const text = encodeURIComponent(
-          `Hello Khoraniya Prime Properties, I just submitted an inquiry on your website.\n\nName: ${name}\nPhone: ${phone}\nInterest: ${property || 'Commercial Opportunity'}\nBudget: ${budget || 'Flexible'}\nLocation: ${location || 'Jaipur'}`
+          `Hello Jaipur Prime Property, I just submitted an inquiry on your website.\n\nName: ${name}\nPhone: ${phone}\nInterest: ${property || 'Commercial Opportunity'}\nBudget: ${budget || 'Flexible'}\nLocation: ${location || 'Jaipur'}`
         );
         successWaBtn.href = `https://wa.me/${waNum}?text=${text}`;
       }
@@ -969,7 +969,7 @@ function initMobileActionBar() {
 window.openWhatsApp = function(customMsg) {
   const rawWa = window.currentSiteData?.contact?.whatsapp || '7689932586';
   const waNum = formatWhatsAppUrlNumber(rawWa);
-  const defaultMsg = "Hello Khoraniya Prime Properties, I would like to enquire about commercial plots and investment opportunities in Jaipur.";
+  const defaultMsg = "Hello Jaipur Prime Property, I would like to enquire about commercial plots and investment opportunities in Jaipur.";
   const text = encodeURIComponent(customMsg || defaultMsg);
   window.open(`https://wa.me/${waNum}?text=${text}`, '_blank');
 };

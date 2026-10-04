@@ -1,6 +1,6 @@
-# Khoraniya Prime Properties — Luxury Commercial Real Estate Website
+# Jaipur Prime Property — Luxury Commercial Real Estate Website
 
-A high-end, responsive one-page website designed and engineered for **Khoraniya Prime Properties**, specializing in prime commercial plots and real estate investments across high-growth corridors in Jaipur, Rajasthan.
+A high-end, responsive one-page website designed and engineered for **Jaipur Prime Property**, specializing in prime commercial plots and real estate investments across high-growth corridors in Jaipur, Rajasthan.
 
 ---
 
@@ -55,7 +55,7 @@ khoraniya-prime-properties/
 ### 2. Phone & Email in HTML
 - In [`index.html`](file:///c:/Users/bhupendra/Desktop/khoraniya-prime-properties/index.html), search for `Placeholder` to replace contact details in the footer and mobile dock:
   - Phone: `+91 98765 XXXXX`
-  - Email: `khoraniyaprimeproperties@gmail.com`
+  - Email: `jaipurprimeproperty@gmail.com`
   - Office Address: `Civil Lines / C-Scheme, Jaipur, Rajasthan 302001`
 
 ### 3. Property Cards & Modal Specs
@@ -85,4 +85,4 @@ To add, edit, or delete projects and update company details without touching cod
 4. Click **"Publish Changes to Live Site"** to push updates directly to GitHub!
 
 ---
-© 2026 Khoraniya Prime Properties. All rights reserved.
+© 2026 Jaipur Prime Property. All rights reserved.
