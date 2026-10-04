@@ -52,10 +52,10 @@ khoraniya-prime-properties/
   const WHATSAPP_PHONE = '919876543210'; // Replace with your real 10-digit number including 91 country code
   ```
 
-### 2. Phone & Email in HTML
+### 2. Phone & Office Address in HTML
 - In [`index.html`](file:///c:/Users/bhupendra/Desktop/khoraniya-prime-properties/index.html), search for `Placeholder` to replace contact details in the footer and mobile dock:
-  - Phone: `+91 98765 XXXXX`
-  - Email: `jaipurprimeproperty@gmail.com`
+  - Phone: `+91 76899 32586`
+  - WhatsApp: `+91 76899 32586`
   - Office Address: `Civil Lines / C-Scheme, Jaipur, Rajasthan 302001`
 
 ### 3. Property Cards & Modal Specs

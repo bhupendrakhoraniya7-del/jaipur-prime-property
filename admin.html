@@ -228,7 +228,7 @@
 
           <div>
             <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">Email Address</label>
-            <input type="email" id="cfg-email" placeholder="jaipurprimeproperty@gmail.com" class="w-full px-4 py-2.5 rounded border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
+            <input type="email" id="cfg-email" placeholder="e.g. info@yourdomain.com (optional)" class="w-full px-4 py-2.5 rounded border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
           </div>
 
           <div>
@@ -727,8 +727,8 @@
 
       if (siteData) {
         if (!siteData.contact) siteData.contact = {};
-        if (!siteData.contact.email || siteData.contact.email === 'enquiry@khoraniyaprime.com' || siteData.contact.email === 'khoraniyaprimeproperties@gmail.com') {
-          siteData.contact.email = 'jaipurprimeproperty@gmail.com';
+        if (siteData.contact.email === 'enquiry@khoraniyaprime.com' || siteData.contact.email === 'khoraniyaprimeproperties@gmail.com' || siteData.contact.email === 'jaipurprimeproperty@gmail.com') {
+          siteData.contact.email = '';
         }
         await saveLocalData();
       }

@@ -8,7 +8,7 @@ const defaultSiteData = {
     phone: "7689932586",
     rawPhone: "7689932586",
     whatsapp: "7689932586",
-    email: "jaipurprimeproperty@gmail.com",
+    email: "",
     address: "Jaipur, Rajasthan 302001",
     tagline: "JPP • Invest. Own. Prosper."
   },
@@ -176,19 +176,23 @@ async function loadSiteData() {
         ...(serverData?.contact || {})
       };
 
-      // Strictly sanitize: replace any old placeholder with official email
-      if (!baseContact.email || baseContact.email.trim() === '' || baseContact.email === 'enquiry@khoraniyaprime.com' || baseContact.email === 'khoraniyaprimeproperties@gmail.com') {
-        baseContact.email = 'jaipurprimeproperty@gmail.com';
+      // Clear out email if it matches any previous gmail or placeholder
+      if (baseContact.email === 'jaipurprimeproperty@gmail.com' || baseContact.email === 'khoraniyaprimeproperties@gmail.com' || baseContact.email === 'enquiry@khoraniyaprime.com') {
+        baseContact.email = '';
       }
 
       // Proactively clean up any stale placeholder email in client's local storage & IndexedDB
-      if (idbData && idbData.contact && (idbData.contact.email === 'enquiry@khoraniyaprime.com' || idbData.contact.email === 'khoraniyaprimeproperties@gmail.com' || !idbData.contact.email)) {
-        idbData.contact.email = 'jaipurprimeproperty@gmail.com';
-        saveToIndexedDB('site_data', idbData).catch(() => {});
+      if (idbData && idbData.contact && idbData.contact.email) {
+        if (idbData.contact.email === 'jaipurprimeproperty@gmail.com' || idbData.contact.email === 'khoraniyaprimeproperties@gmail.com' || idbData.contact.email === 'enquiry@khoraniyaprime.com') {
+          idbData.contact.email = '';
+          saveToIndexedDB('site_data', idbData).catch(() => {});
+        }
       }
-      if (cachedData && cachedData.contact && (cachedData.contact.email === 'enquiry@khoraniyaprime.com' || cachedData.contact.email === 'khoraniyaprimeproperties@gmail.com' || !cachedData.contact.email)) {
-        cachedData.contact.email = 'jaipurprimeproperty@gmail.com';
-        try { localStorage.setItem('khoraniya_site_data', JSON.stringify(cachedData)); } catch(e) {}
+      if (cachedData && cachedData.contact && cachedData.contact.email) {
+        if (cachedData.contact.email === 'jaipurprimeproperty@gmail.com' || cachedData.contact.email === 'khoraniyaprimeproperties@gmail.com' || cachedData.contact.email === 'enquiry@khoraniyaprime.com') {
+          cachedData.contact.email = '';
+          try { localStorage.setItem('khoraniya_site_data', JSON.stringify(cachedData)); } catch(e) {}
+        }
       }
 
       // Blacklist of obsolete dummy template properties
@@ -401,14 +405,24 @@ function bindContactInfo() {
   });
 
   // Email
-  const safeEmail = (contact && contact.email && contact.email !== 'enquiry@khoraniyaprime.com' && contact.email !== 'khoraniyaprimeproperties@gmail.com')
+  const safeEmail = (contact && contact.email && contact.email.trim() !== '' && 
+    contact.email !== 'enquiry@khoraniyaprime.com' && 
+    contact.email !== 'khoraniyaprimeproperties@gmail.com' && 
+    contact.email !== 'jaipurprimeproperty@gmail.com')
     ? contact.email.trim()
-    : 'jaipurprimeproperty@gmail.com';
+    : '';
 
   document.querySelectorAll('[data-bind="email"]').forEach(el => {
-    el.textContent = safeEmail;
-    if (el.tagName === 'A') {
-      el.href = `mailto:${safeEmail}`;
+    if (safeEmail) {
+      el.textContent = safeEmail;
+      if (el.tagName === 'A') {
+        el.href = `mailto:${safeEmail}`;
+      }
+      const parent = el.closest('li') || el;
+      parent.style.display = '';
+    } else {
+      const parent = el.closest('li') || el;
+      parent.style.display = 'none';
     }
   });
 
