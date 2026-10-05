@@ -212,23 +212,23 @@
         <form id="contact-form" class="space-y-5">
           <div>
             <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">Phone Number (Display)</label>
-            <input type="text" id="cfg-phone" placeholder="+91 7689932586" class="w-full px-4 py-2.5 rounded border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
+            <input type="text" id="cfg-phone" placeholder="+91 88243 48273" class="w-full px-4 py-2.5 rounded border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
           </div>
 
           <div>
             <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">Raw Phone (For tap-to-call links, numbers only)</label>
-            <input type="text" id="cfg-rawPhone" placeholder="+917689932586" class="w-full px-4 py-2.5 rounded border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
+            <input type="text" id="cfg-rawPhone" placeholder="+918824348273" class="w-full px-4 py-2.5 rounded border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
           </div>
 
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">WhatsApp Number (e.g. 7689932586)</label>
-            <input type="text" id="cfg-whatsapp" placeholder="7689932586" class="w-full px-4 py-2.5 rounded border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
+            <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">WhatsApp Number (e.g. 8824348273)</label>
+            <input type="text" id="cfg-whatsapp" placeholder="8824348273" class="w-full px-4 py-2.5 rounded border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
             <p class="text-[11px] text-[#555E68] mt-1">10-digit mobile number or with 91 country code.</p>
           </div>
 
           <div>
             <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">Email Address</label>
-            <input type="email" id="cfg-email" placeholder="e.g. info@yourdomain.com (optional)" class="w-full px-4 py-2.5 rounded border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
+            <input type="email" id="cfg-email" placeholder="jaipurprimeproperty77@gmail.com" class="w-full px-4 py-2.5 rounded border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
           </div>
 
           <div>
@@ -727,8 +727,13 @@
 
       if (siteData) {
         if (!siteData.contact) siteData.contact = {};
-        if (siteData.contact.email === 'enquiry@khoraniyaprime.com' || siteData.contact.email === 'khoraniyaprimeproperties@gmail.com' || siteData.contact.email === 'jaipurprimeproperty@gmail.com') {
-          siteData.contact.email = '';
+        if (!siteData.contact.phone || siteData.contact.phone === '7689932586') {
+          siteData.contact.phone = '8824348273';
+          siteData.contact.rawPhone = '8824348273';
+          siteData.contact.whatsapp = '8824348273';
+        }
+        if (!siteData.contact.email || siteData.contact.email === 'enquiry@khoraniyaprime.com' || siteData.contact.email === 'khoraniyaprimeproperties@gmail.com' || siteData.contact.email === 'jaipurprimeproperty@gmail.com') {
+          siteData.contact.email = 'jaipurprimeproperty77@gmail.com';
         }
         await saveLocalData();
       }

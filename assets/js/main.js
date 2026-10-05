@@ -5,10 +5,10 @@
 // Fallback Default Data in case fetch is blocked (e.g. local file:// protocol)
 const defaultSiteData = {
   contact: {
-    phone: "7689932586",
-    rawPhone: "7689932586",
-    whatsapp: "7689932586",
-    email: "",
+    phone: "8824348273",
+    rawPhone: "8824348273",
+    whatsapp: "8824348273",
+    email: "jaipurprimeproperty77@gmail.com",
     address: "Jaipur, Rajasthan 302001",
     tagline: "JPP • Invest. Own. Prosper."
   },
@@ -176,23 +176,40 @@ async function loadSiteData() {
         ...(serverData?.contact || {})
       };
 
-      // Clear out email if it matches any previous gmail or placeholder
-      if (baseContact.email === 'jaipurprimeproperty@gmail.com' || baseContact.email === 'khoraniyaprimeproperties@gmail.com' || baseContact.email === 'enquiry@khoraniyaprime.com') {
-        baseContact.email = '';
+      // Migrate contact phone/whatsapp to official number: 8824348273
+      if (!baseContact.phone || baseContact.phone === '7689932586') {
+        baseContact.phone = '8824348273';
+        baseContact.rawPhone = '8824348273';
+        baseContact.whatsapp = '8824348273';
       }
 
-      // Proactively clean up any stale placeholder email in client's local storage & IndexedDB
-      if (idbData && idbData.contact && idbData.contact.email) {
-        if (idbData.contact.email === 'jaipurprimeproperty@gmail.com' || idbData.contact.email === 'khoraniyaprimeproperties@gmail.com' || idbData.contact.email === 'enquiry@khoraniyaprime.com') {
-          idbData.contact.email = '';
-          saveToIndexedDB('site_data', idbData).catch(() => {});
-        }
+      // Migrate contact email to official email: jaipurprimeproperty77@gmail.com
+      if (!baseContact.email || baseContact.email === 'jaipurprimeproperty@gmail.com' || baseContact.email === 'khoraniyaprimeproperties@gmail.com' || baseContact.email === 'enquiry@khoraniyaprime.com') {
+        baseContact.email = 'jaipurprimeproperty77@gmail.com';
       }
-      if (cachedData && cachedData.contact && cachedData.contact.email) {
-        if (cachedData.contact.email === 'jaipurprimeproperty@gmail.com' || cachedData.contact.email === 'khoraniyaprimeproperties@gmail.com' || cachedData.contact.email === 'enquiry@khoraniyaprime.com') {
-          cachedData.contact.email = '';
-          try { localStorage.setItem('khoraniya_site_data', JSON.stringify(cachedData)); } catch(e) {}
+
+      // Proactively clean up client's local storage & IndexedDB
+      if (idbData && idbData.contact) {
+        if (!idbData.contact.phone || idbData.contact.phone === '7689932586') {
+          idbData.contact.phone = '8824348273';
+          idbData.contact.rawPhone = '8824348273';
+          idbData.contact.whatsapp = '8824348273';
         }
+        if (!idbData.contact.email || idbData.contact.email !== 'jaipurprimeproperty77@gmail.com') {
+          idbData.contact.email = 'jaipurprimeproperty77@gmail.com';
+        }
+        saveToIndexedDB('site_data', idbData).catch(() => {});
+      }
+      if (cachedData && cachedData.contact) {
+        if (!cachedData.contact.phone || cachedData.contact.phone === '7689932586') {
+          cachedData.contact.phone = '8824348273';
+          cachedData.contact.rawPhone = '8824348273';
+          cachedData.contact.whatsapp = '8824348273';
+        }
+        if (!cachedData.contact.email || cachedData.contact.email !== 'jaipurprimeproperty77@gmail.com') {
+          cachedData.contact.email = 'jaipurprimeproperty77@gmail.com';
+        }
+        try { localStorage.setItem('khoraniya_site_data', JSON.stringify(cachedData)); } catch(e) {}
       }
 
       // Blacklist of obsolete dummy template properties
@@ -347,18 +364,18 @@ function renderProperties() {
 }
 
 function formatWhatsAppUrlNumber(num) {
-  if (!num) return '917689932586';
+  if (!num) return '918824348273';
   let clean = num.toString().replace(/\D/g, '');
   if (clean.length === 10) {
     clean = '91' + clean;
   } else if (clean.length === 11 && clean.startsWith('0')) {
     clean = '91' + clean.slice(1);
   }
-  return clean || '917689932586';
+  return clean || '918824348273';
 }
 
 function formatDisplayPhoneNumber(num) {
-  if (!num) return '+91 7689932586';
+  if (!num) return '+91 88243 48273';
   let clean = num.toString().trim();
   if (clean.startsWith('+')) return clean;
   let digits = clean.replace(/\D/g, '');
@@ -377,10 +394,10 @@ function formatDisplayPhoneNumber(num) {
 function bindContactInfo() {
   const contact = window.currentSiteData.contact || defaultSiteData.contact;
 
-  const displayPhone = formatDisplayPhoneNumber(contact.phone || '7689932586');
-  const rawCallNum = (contact.rawPhone || contact.phone || '7689932586').toString().replace(/\D/g, '');
-  const displayWa = formatDisplayPhoneNumber(contact.whatsapp || '7689932586');
-  const waUrlNum = formatWhatsAppUrlNumber(contact.whatsapp || '7689932586');
+  const displayPhone = formatDisplayPhoneNumber(contact.phone || '8824348273');
+  const rawCallNum = (contact.rawPhone || contact.phone || '8824348273').toString().replace(/\D/g, '');
+  const displayWa = formatDisplayPhoneNumber(contact.whatsapp || '8824348273');
+  const waUrlNum = formatWhatsAppUrlNumber(contact.whatsapp || '8824348273');
   const telHref = `tel:+${rawCallNum.length === 10 ? '91' + rawCallNum : rawCallNum}`;
 
   // Phone
@@ -410,7 +427,7 @@ function bindContactInfo() {
     contact.email !== 'khoraniyaprimeproperties@gmail.com' && 
     contact.email !== 'jaipurprimeproperty@gmail.com')
     ? contact.email.trim()
-    : '';
+    : 'jaipurprimeproperty77@gmail.com';
 
   document.querySelectorAll('[data-bind="email"]').forEach(el => {
     if (safeEmail) {
@@ -943,7 +960,7 @@ function initLeadForm() {
 
       const successWaBtn = document.getElementById('success-wa-btn');
       if (successWaBtn) {
-        const rawWa = window.currentSiteData?.contact?.whatsapp || '7689932586';
+        const rawWa = window.currentSiteData?.contact?.whatsapp || '8824348273';
         const waNum = formatWhatsAppUrlNumber(rawWa);
         const text = encodeURIComponent(
           `Hello Jaipur Prime Property, I just submitted an inquiry on your website.\n\nName: ${name}\nPhone: ${phone}\nInterest: ${property || 'Commercial Opportunity'}\nBudget: ${budget || 'Flexible'}\nLocation: ${location || 'Jaipur'}`
@@ -981,7 +998,7 @@ function initMobileActionBar() {
 
 // WhatsApp Helper
 window.openWhatsApp = function(customMsg) {
-  const rawWa = window.currentSiteData?.contact?.whatsapp || '7689932586';
+  const rawWa = window.currentSiteData?.contact?.whatsapp || '8824348273';
   const waNum = formatWhatsAppUrlNumber(rawWa);
   const defaultMsg = "Hello Jaipur Prime Property, I would like to enquire about commercial plots and investment opportunities in Jaipur.";
   const text = encodeURIComponent(customMsg || defaultMsg);

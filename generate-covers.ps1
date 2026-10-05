@@ -172,7 +172,7 @@ function Generate-FacebookCoverDark {
 
     $fontBtn = New-Object System.Drawing.Font("Century Gothic", 17, [System.Drawing.FontStyle]::Bold)
     $brushBtnText = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(18, 20, 24))
-    Draw-SpacedText $gfx "CALL / WHATSAPP: +91 7689932586" $fontBtn $brushBtnText ($btnX + ($btnW / 2)) ($btnY + 18) 2 "Center"
+    Draw-SpacedText $gfx "CALL / WHATSAPP: +91 8824348273" $fontBtn $brushBtnText ($btnX + ($btnW / 2)) ($btnY + 18) 2 "Center"
 
     # Location Info
     $fontLoc = New-Object System.Drawing.Font("Century Gothic", 13, [System.Drawing.FontStyle]::Bold)
@@ -296,7 +296,7 @@ function Generate-FacebookCoverWhite {
 
     $fontBtn = New-Object System.Drawing.Font("Century Gothic", 17, [System.Drawing.FontStyle]::Bold)
     $brushBtnWhite = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::White)
-    Draw-SpacedText $gfx "CALL / WHATSAPP: +91 7689932586" $fontBtn $brushBtnWhite ($btnX + ($btnW / 2)) ($btnY + 18) 2 "Center"
+    Draw-SpacedText $gfx "CALL / WHATSAPP: +91 8824348273" $fontBtn $brushBtnWhite ($btnX + ($btnW / 2)) ($btnY + 18) 2 "Center"
 
     $fontLoc = New-Object System.Drawing.Font("Century Gothic", 13, [System.Drawing.FontStyle]::Bold)
     $brushLoc = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(90, 100, 110))
@@ -395,7 +395,7 @@ function Generate-WhatsAppCoverDark {
     Draw-RoundedRect $gfx $btnX $ctaY $btnW $btnH 10 $brushBtn $null
     $fontBtn = New-Object System.Drawing.Font("Century Gothic", 16, [System.Drawing.FontStyle]::Bold)
     $brushDarkText = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(18, 20, 24))
-    Draw-SpacedText $gfx "WHATSAPP / DIRECT: +91 7689932586" $fontBtn $brushDarkText ($w / 2) ($ctaY + 17) 2 "Center"
+    Draw-SpacedText $gfx "WHATSAPP / DIRECT: +91 8824348273" $fontBtn $brushDarkText ($w / 2) ($ctaY + 17) 2 "Center"
 
     $gfx.Flush(); $gfx.Dispose()
     $outPath = "assets\covers\whatsapp-cover-dark-1152x648.jpg"
@@ -475,7 +475,7 @@ function Generate-WhatsAppCoverWhite {
     Draw-RoundedRect $gfx $btnX $ctaY $btnW $btnH 10 $brushBtn $null
     $fontBtn = New-Object System.Drawing.Font("Century Gothic", 16, [System.Drawing.FontStyle]::Bold)
     $brushBtnWhite = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::White)
-    Draw-SpacedText $gfx "WHATSAPP / DIRECT: +91 7689932586" $fontBtn $brushBtnWhite ($w / 2) ($ctaY + 17) 2 "Center"
+    Draw-SpacedText $gfx "WHATSAPP / DIRECT: +91 8824348273" $fontBtn $brushBtnWhite ($w / 2) ($ctaY + 17) 2 "Center"
 
     $gfx.Flush(); $gfx.Dispose()
     $outPath = "assets\covers\whatsapp-cover-white-1152x648.jpg"
@@ -559,7 +559,7 @@ function Generate-InstagramSquareDark {
     Draw-RoundedRect $gfx $btnX $ctaY $btnW $btnH 12 $brushBtn $null
     $fontBtn = New-Object System.Drawing.Font("Century Gothic", 19, [System.Drawing.FontStyle]::Bold)
     $brushDark = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(18, 20, 24))
-    Draw-SpacedText $gfx "BOOK SITE VISIT: +91 7689932586" $fontBtn $brushDark ($w / 2) ($ctaY + 22) 2 "Center"
+    Draw-SpacedText $gfx "BOOK SITE VISIT: +91 8824348273" $fontBtn $brushDark ($w / 2) ($ctaY + 22) 2 "Center"
 
     $fontFoot = New-Object System.Drawing.Font("Century Gothic", 13, [System.Drawing.FontStyle]::Bold)
     $brushFoot = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(160, 150, 135))
@@ -647,7 +647,7 @@ function Generate-InstagramSquareWhite {
     Draw-RoundedRect $gfx $btnX $ctaY $btnW $btnH 12 $brushBtn $null
     $fontBtn = New-Object System.Drawing.Font("Century Gothic", 19, [System.Drawing.FontStyle]::Bold)
     $brushBtnWhite = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::White)
-    Draw-SpacedText $gfx "BOOK SITE VISIT: +91 7689932586" $fontBtn $brushBtnWhite ($w / 2) ($ctaY + 22) 2 "Center"
+    Draw-SpacedText $gfx "BOOK SITE VISIT: +91 8824348273" $fontBtn $brushBtnWhite ($w / 2) ($ctaY + 22) 2 "Center"
 
     $fontFoot = New-Object System.Drawing.Font("Century Gothic", 13, [System.Drawing.FontStyle]::Bold)
     $brushFoot = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(140, 125, 105))
@@ -750,7 +750,7 @@ function Generate-InstagramStoryDark {
     Draw-RoundedRect $gfx $btnX $ctaY $btnW $btnH 16 $brushBtn $null
     $fontBtn = New-Object System.Drawing.Font("Century Gothic", 22, [System.Drawing.FontStyle]::Bold)
     $brushDark = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(18, 20, 24))
-    Draw-SpacedText $gfx "CALL / WHATSAPP: +91 7689932586" $fontBtn $brushDark ($w / 2) ($ctaY + 28) 2 "Center"
+    Draw-SpacedText $gfx "CALL / WHATSAPP: +91 8824348273" $fontBtn $brushDark ($w / 2) ($ctaY + 28) 2 "Center"
 
     $fontFoot = New-Object System.Drawing.Font("Century Gothic", 15, [System.Drawing.FontStyle]::Bold)
     $brushFoot = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(170, 160, 145))
@@ -854,7 +854,7 @@ function Generate-InstagramStoryWhite {
     Draw-RoundedRect $gfx $btnX $ctaY $btnW $btnH 16 $brushBtn $null
     $fontBtn = New-Object System.Drawing.Font("Century Gothic", 22, [System.Drawing.FontStyle]::Bold)
     $brushBtnWhite = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::White)
-    Draw-SpacedText $gfx "CALL / WHATSAPP: +91 7689932586" $fontBtn $brushBtnWhite ($w / 2) ($ctaY + 28) 2 "Center"
+    Draw-SpacedText $gfx "CALL / WHATSAPP: +91 8824348273" $fontBtn $brushBtnWhite ($w / 2) ($ctaY + 28) 2 "Center"
 
     $fontFoot = New-Object System.Drawing.Font("Century Gothic", 15, [System.Drawing.FontStyle]::Bold)
     $brushFoot = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(120, 125, 135))
