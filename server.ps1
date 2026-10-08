@@ -1,6 +1,6 @@
 $port = 5500
 $root = $PSScriptRoot
-if (-not $root) { $root = "c:\Users\bhupendra\Desktop\khoraniya-prime-properties" }
+if (-not $root) { $root = (Get-Location).Path }
 
 $listener = New-Object System.Net.HttpListener
 $listener.Prefixes.Add("http://localhost:$port/")

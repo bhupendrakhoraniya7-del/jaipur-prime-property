@@ -17,7 +17,7 @@ A high-end, responsive one-page website designed and engineered for **Jaipur Pri
 ## 📂 Project Architecture
 
 ```
-khoraniya-prime-properties/
+jaipur-prime-property/
 ├── index.html               # 13 structured sections, semantic HTML5, Schema.org JSON-LD
 ├── README.md                # Documentation & customization guide
 └── assets/
@@ -32,7 +32,7 @@ khoraniya-prime-properties/
 ## 🚀 How to Run and Preview
 
 1. **Direct Browser Preview**:
-   - Simply double-click [`index.html`](file:///c:/Users/bhupendra/Desktop/khoraniya-prime-properties/index.html) to open it in Chrome, Edge, Safari, or Firefox.
+   - Simply double-click [`index.html`](file:///c:/Users/bhupendra/Desktop/jaipur-prime-property/index.html) to open it in Chrome, Edge, Safari, or Firefox.
 2. **Via Local Server** (optional):
    - You can run an HTTP server using Python or Node if desired:
      ```bash
@@ -46,24 +46,24 @@ khoraniya-prime-properties/
 ## 🛠️ How to Customize Placeholders
 
 ### 1. WhatsApp Number
-- Open [`assets/js/main.js`](file:///c:/Users/bhupendra/Desktop/khoraniya-prime-properties/assets/js/main.js)
+- Open [`assets/js/main.js`](file:///c:/Users/bhupendra/Desktop/jaipur-prime-property/assets/js/main.js)
 - Update line 57:
   ```javascript
   const WHATSAPP_PHONE = '919876543210'; // Replace with your real 10-digit number including 91 country code
   ```
 
 ### 2. Phone & Email in HTML
-- In [`index.html`](file:///c:/Users/bhupendra/Desktop/khoraniya-prime-properties/index.html), search for `Placeholder` to replace contact details in the footer and mobile dock:
+- In [`index.html`](file:///c:/Users/bhupendra/Desktop/jaipur-prime-property/index.html), search for `Placeholder` to replace contact details in the footer and mobile dock:
   - Phone: `+91 88243 48273`
   - WhatsApp: `+91 88243 48273`
   - Email: `jaipurprimeproperty77@gmail.com`
   - Office Address: `Civil Lines / C-Scheme, Jaipur, Rajasthan 302001`
 
 ### 3. Property Cards & Modal Specs
-- Commercial plot specifications, sizes, and highlights can be updated directly in `propertyData` within [`assets/js/main.js`](file:///c:/Users/bhupendra/Desktop/khoraniya-prime-properties/assets/js/main.js) (lines 6–54).
+- Commercial plot specifications, sizes, and highlights can be updated directly in `propertyData` within [`assets/js/main.js`](file:///c:/Users/bhupendra/Desktop/jaipur-prime-property/assets/js/main.js) (lines 6–54).
 
 ### 4. Client Testimonials
-- The 3 testimonial cards in Section 9 of [`index.html`](file:///c:/Users/bhupendra/Desktop/khoraniya-prime-properties/index.html) contain clearly designated placeholder quotes ready to be replaced with genuine reviews.
+- The 3 testimonial cards in Section 9 of [`index.html`](file:///c:/Users/bhupendra/Desktop/jaipur-prime-property/index.html) contain clearly designated placeholder quotes ready to be replaced with genuine reviews.
 
 ---
 
@@ -80,7 +80,7 @@ khoraniya-prime-properties/
 ## 🔐 Visual Admin Portal (CMS)
 
 To add, edit, or delete projects and update company details without touching code:
-1. Open [`admin.html`](file:///c:/Users/bhupendra/Desktop/khoraniya-prime-properties/admin.html) or visit `https://jaipurprimeproperty.in/admin.html`.
+1. Open [`admin.html`](file:///c:/Users/bhupendra/Desktop/jaipur-prime-property/admin.html) or visit `https://jaipurprimeproperty.in/admin.html`.
 2. Enter security PIN: `1234` (can be changed inside the portal).
 3. Manage commercial plots and contact information visually.
 4. Click **"Publish Changes to Live Site"** to push updates directly to GitHub!
