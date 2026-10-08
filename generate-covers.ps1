@@ -181,7 +181,7 @@ function Generate-FacebookCoverDark {
 
     $fontWeb = New-Object System.Drawing.Font("Century Gothic", 13, [System.Drawing.FontStyle]::Bold)
     $brushWeb = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(180, 160, 130))
-    Draw-SpacedText $gfx "WWW.JAIPURPRIMEPROPERTY.COM" $fontWeb $brushWeb 95 480 3 "Left"
+    Draw-SpacedText $gfx "WWW.JAIPURPRIMEPROPERTY.IN" $fontWeb $brushWeb 95 480 3 "Left"
 
     $gfx.Flush(); $gfx.Dispose()
 
@@ -304,7 +304,7 @@ function Generate-FacebookCoverWhite {
 
     $fontWeb = New-Object System.Drawing.Font("Century Gothic", 13, [System.Drawing.FontStyle]::Bold)
     $brushWeb = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(160, 130, 80))
-    Draw-SpacedText $gfx "WWW.JAIPURPRIMEPROPERTY.COM" $fontWeb $brushWeb 95 480 3 "Left"
+    Draw-SpacedText $gfx "WWW.JAIPURPRIMEPROPERTY.IN" $fontWeb $brushWeb 95 480 3 "Left"
 
     $gfx.Flush(); $gfx.Dispose()
 
@@ -563,7 +563,7 @@ function Generate-InstagramSquareDark {
 
     $fontFoot = New-Object System.Drawing.Font("Century Gothic", 13, [System.Drawing.FontStyle]::Bold)
     $brushFoot = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(160, 150, 135))
-    Draw-SpacedText $gfx "LOCATION: JAIPUR, RAJASTHAN   -   WWW.JAIPURPRIMEPROPERTY.COM" $fontFoot $brushFoot ($w / 2) 990 3 "Center"
+    Draw-SpacedText $gfx "LOCATION: JAIPUR, RAJASTHAN   -   WWW.JAIPURPRIMEPROPERTY.IN" $fontFoot $brushFoot ($w / 2) 990 3 "Center"
 
     $gfx.Flush(); $gfx.Dispose()
     $outPath = "assets\covers\instagram-post-dark-1080x1080.jpg"
@@ -651,7 +651,7 @@ function Generate-InstagramSquareWhite {
 
     $fontFoot = New-Object System.Drawing.Font("Century Gothic", 13, [System.Drawing.FontStyle]::Bold)
     $brushFoot = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(140, 125, 105))
-    Draw-SpacedText $gfx "LOCATION: JAIPUR, RAJASTHAN   -   WWW.JAIPURPRIMEPROPERTY.COM" $fontFoot $brushFoot ($w / 2) 990 3 "Center"
+    Draw-SpacedText $gfx "LOCATION: JAIPUR, RAJASTHAN   -   WWW.JAIPURPRIMEPROPERTY.IN" $fontFoot $brushFoot ($w / 2) 990 3 "Center"
 
     $gfx.Flush(); $gfx.Dispose()
     $outPath = "assets\covers\instagram-post-white-1080x1080.jpg"
@@ -755,7 +755,7 @@ function Generate-InstagramStoryDark {
     $fontFoot = New-Object System.Drawing.Font("Century Gothic", 15, [System.Drawing.FontStyle]::Bold)
     $brushFoot = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(170, 160, 145))
     Draw-SpacedText $gfx "Location: Mahindra World City, Ajmer Road, Jaipur" $fontFoot $brushFoot ($w / 2) 1590 2 "Center"
-    Draw-SpacedText $gfx "WWW.JAIPURPRIMEPROPERTY.COM" $fontFoot $brushGold ($w / 2) 1640 4 "Center"
+    Draw-SpacedText $gfx "WWW.JAIPURPRIMEPROPERTY.IN" $fontFoot $brushGold ($w / 2) 1640 4 "Center"
 
     $gfx.Flush(); $gfx.Dispose()
     $outPath = "assets\covers\instagram-story-dark-1080x1920.jpg"
@@ -859,7 +859,7 @@ function Generate-InstagramStoryWhite {
     $fontFoot = New-Object System.Drawing.Font("Century Gothic", 15, [System.Drawing.FontStyle]::Bold)
     $brushFoot = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(120, 125, 135))
     Draw-SpacedText $gfx "Location: Mahindra World City, Ajmer Road, Jaipur" $fontFoot $brushFoot ($w / 2) 1590 2 "Center"
-    Draw-SpacedText $gfx "WWW.JAIPURPRIMEPROPERTY.COM" $fontFoot $brushGold ($w / 2) 1640 4 "Center"
+    Draw-SpacedText $gfx "WWW.JAIPURPRIMEPROPERTY.IN" $fontFoot $brushGold ($w / 2) 1640 4 "Center"
 
     $gfx.Flush(); $gfx.Dispose()
     $outPath = "assets\covers\instagram-story-white-1080x1920.jpg"

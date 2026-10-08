@@ -80,7 +80,7 @@ khoraniya-prime-properties/
 ## 🔐 Visual Admin Portal (CMS)
 
 To add, edit, or delete projects and update company details without touching code:
-1. Open [`admin.html`](file:///c:/Users/bhupendra/Desktop/khoraniya-prime-properties/admin.html) or visit `https://khoraniyaprimeproperties.in/admin.html`.
+1. Open [`admin.html`](file:///c:/Users/bhupendra/Desktop/khoraniya-prime-properties/admin.html) or visit `https://jaipurprimeproperty.in/admin.html`.
 2. Enter security PIN: `1234` (can be changed inside the portal).
 3. Manage commercial plots and contact information visually.
 4. Click **"Publish Changes to Live Site"** to push updates directly to GitHub!
