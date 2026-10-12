@@ -968,6 +968,16 @@ function initLeadForm() {
         successWaBtn.href = `https://wa.me/${waNum}?text=${text}`;
       }
 
+      // Meta Pixel Lead Event
+      if (typeof window.fbq === 'function') {
+        try {
+          window.fbq('track', 'Lead', {
+            content_name: property || 'Commercial Opportunity',
+            currency: 'INR'
+          });
+        } catch (e) {}
+      }
+
       form.reset();
     }, 650);
   });
@@ -998,9 +1008,25 @@ function initMobileActionBar() {
 
 // WhatsApp Helper
 window.openWhatsApp = function(customMsg) {
+  if (typeof window.fbq === 'function') {
+    try { window.fbq('track', 'Contact', { channel: 'WhatsApp' }); } catch(err) {}
+  }
   const rawWa = window.currentSiteData?.contact?.whatsapp || '8824348273';
   const waNum = formatWhatsAppUrlNumber(rawWa);
   const defaultMsg = "Hello Jaipur Prime Property, I would like to enquire about commercial plots and investment opportunities in Jaipur.";
   const text = encodeURIComponent(customMsg || defaultMsg);
   window.open(`https://wa.me/${waNum}?text=${text}`, '_blank');
 };
+
+// Meta Pixel Contact Tracking for direct links (WhatsApp & Phone)
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a');
+  if (!link || typeof window.fbq !== 'function') return;
+  const href = link.getAttribute('href') || '';
+  if (href.includes('wa.me') || href.includes('whatsapp.com')) {
+    try { window.fbq('track', 'Contact', { channel: 'WhatsApp' }); } catch(err) {}
+  } else if (href.startsWith('tel:')) {
+    try { window.fbq('track', 'Contact', { channel: 'Phone' }); } catch(err) {}
+  }
+});
+
