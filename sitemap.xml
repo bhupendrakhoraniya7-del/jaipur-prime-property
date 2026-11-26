@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://jaipurprimeproperty.in/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <image:image>
+      <image:loc>https://jaipurprimeproperty.in/assets/images/logo-dark.jpg</image:loc>
+      <image:title>Jaipur Prime Property Logo</image:title>
+      <image:caption>Jaipur Prime Property - Premium Commercial &amp; Residential Plots in Jaipur</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jaipurprimeproperty.in/assets/images/property-prop-1789803364773.jpg</image:loc>
+      <image:title>Chart Knowledge Park Plots Diggi Road</image:title>
+      <image:caption>Commercial and Residential plots opposite Knowledge City, Diggi Road, Jaipur</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jaipurprimeproperty.in/assets/images/property-prop-1789795429112.jpg</image:loc>
+      <image:title>Chart Nexara Plots Mahindra World City</image:title>
+      <image:caption>Commercial and Residential plots in Mahindra World City SEZ, Ajmer Road, Jaipur</image:caption>
+    </image:image>
+  </url>
+</urlset>

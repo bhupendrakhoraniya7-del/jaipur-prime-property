@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M4XLZQ2J');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SEO &amp; Sitemap Admin Panel | Jaipur Prime Property</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg?v=20261005">
+  <link rel="apple-touch-icon" href="assets/images/favicon.jpg?v=20261005">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sand: { 50: '#FAF8F5', 100: '#F3EFEA', 200: '#E7E0D5', 300: '#D8CEBE' },
+            gold: { 400: '#D5BA8E', 500: '#C5A880', 600: '#A8885B' },
+            charcoal: { 800: '#202328', 900: '#141619', 950: '#0B0D0F' }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .btn-gold {
+      background: linear-gradient(135deg, #D5BA8E, #A8885B);
+      color: #FFFFFF;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 12px 0 rgba(168, 136, 91, 0.28);
+    }
+    .btn-gold:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px 0 rgba(168, 136, 91, 0.38);
+    }
+  </style>
+</head>
+<body class="bg-[#FAF8F5] text-[#202328] min-h-screen">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4XLZQ2J"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- PIN AUTHENTICATION OVERLAY -->
+  <div id="auth-screen" class="fixed inset-0 z-50 bg-[#0B0D0F] flex items-center justify-center p-4">
+    <div class="bg-white max-w-sm w-full rounded-2xl shadow-2xl p-8 text-center border border-[#E7E0D5]">
+      <div class="w-16 h-16 rounded-2xl overflow-hidden border border-[#C5A880]/60 shadow-lg mx-auto mb-4 bg-white p-0.5">
+        <img src="assets/images/logo-icon.jpg?v=20261005" alt="Logo" class="w-full h-full object-cover">
+      </div>
+
+      <span class="text-[10px] uppercase tracking-widest text-[#A8885B] font-bold">SEO &amp; Webmaster Console</span>
+      <h2 class="font-serif text-2xl font-bold text-[#141619] mt-1 mb-2">Staff Login</h2>
+      <p class="text-xs text-[#555E68] mb-6">Enter your 4-digit PIN to access the SEO &amp; Sitemap Dashboard.</p>
+
+      <form id="pin-form" class="space-y-4">
+        <input 
+          type="password" 
+          id="pin-input" 
+          maxlength="6" 
+          placeholder="••••" 
+          class="w-full text-center tracking-[0.5em] text-2xl font-bold py-3 rounded-xl border border-[#E7E0D5] bg-[#FAF8F5] focus:outline-none focus:border-[#A8885B]"
+          required
+          autofocus
+        >
+        <p id="pin-error" class="text-xs text-red-600 hidden font-medium">Incorrect PIN. Default is 1234.</p>
+        
+        <button type="submit" class="btn-gold w-full py-3 rounded-xl text-xs uppercase tracking-wider font-semibold">
+          Unlock SEO Console
+        </button>
+      </form>
+
+      <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-[11px] text-[#555E68]">
+        <span>Default PIN: <strong class="text-[#141619]">1234</strong></span>
+        <a href="index.html" class="text-[#A8885B] hover:underline">← Back to Site</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN SEO CONSOLE DASHBOARD -->
+  <div id="seo-dashboard" class="hidden min-h-screen flex flex-col">
+    
+    <!-- Top Header -->
+    <header class="bg-[#141619] text-white border-b border-stone-800 px-6 py-4 flex items-center justify-between sticky top-0 z-40">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <div class="w-9 h-9 rounded-lg overflow-hidden flex-shrink-0 border border-[#C5A880]/50 shadow bg-white p-0.5">
+            <img src="assets/images/logo-icon.jpg?v=20261005" alt="Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col">
+            <span class="text-[9.5px] uppercase tracking-[0.2em] text-[#D5BA8E] leading-none mb-0.5">Jaipur</span>
+            <span class="font-serif text-lg font-bold tracking-tight text-white group-hover:text-[#D5BA8E] transition-colors leading-none">PRIME PROPERTY</span>
+          </div>
+        </a>
+        <span class="text-xs bg-[#C5A880]/20 text-[#D5BA8E] px-2.5 py-0.5 rounded border border-[#C5A880]/30 font-medium">SEO &amp; Sitemap Console</span>
+      </div>
+
+      <div class="flex items-center gap-4 text-xs">
+        <a href="admin.html" class="inline-flex items-center gap-1.5 text-stone-300 hover:text-[#D5BA8E] transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          <span>Main CMS Admin</span>
+        </a>
+        <a href="index.html" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 text-stone-300 hover:text-white transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          <span>View Live Site</span>
+        </a>
+        <button onclick="logout()" class="px-3 py-1.5 rounded border border-white/20 text-stone-300 hover:text-white transition-colors">
+          Logout
+        </button>
+      </div>
+    </header>
+
+    <!-- Toast Banner -->
+    <div id="toast" class="hidden fixed top-20 right-6 z-50 bg-[#141619] text-white px-5 py-3.5 rounded-lg shadow-xl border border-[#C5A880] flex items-center gap-3 text-xs">
+      <span id="toast-msg">Action completed successfully!</span>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 max-w-6xl mx-auto w-full p-6 sm:p-8 space-y-8">
+      
+      <!-- Top Actions Bar -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-[#E7E0D5]">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-[10px] uppercase tracking-widest text-[#A8885B] font-bold px-2 py-0.5 rounded bg-white border border-[#E7E0D5]">Google Search Optimization</span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-semibold border border-emerald-200">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              Live on GitHub Pages
+            </span>
+          </div>
+          <h1 class="font-serif text-3xl font-bold text-[#141619]">SEO &amp; Sitemap Dashboard</h1>
+          <p class="text-xs sm:text-sm text-[#555E68] mt-1">Manage your official sitemap URL, Google search appearance, SERP snippets, and Schema.org rich results.</p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button onclick="saveSeoSettings(event)" class="btn-gold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider font-semibold flex items-center gap-2 shadow">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span>Save SEO Settings</span>
+          </button>
+          <a href="admin.html?tab=publish" class="px-4 py-2.5 rounded-xl border border-[#E7E0D5] bg-white text-xs font-semibold text-[#141619] hover:bg-stone-50 flex items-center gap-1.5">
+            <span>Publish Live 🚀</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SITEMAP URL SPOTLIGHT CARD -->
+      <div class="bg-white p-6 sm:p-7 rounded-2xl border-2 border-[#C5A880]/60 shadow-md space-y-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-xl">
+              🗺️
+            </div>
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-[#A8885B] font-bold">Search Engine Indexing</span>
+              <h3 class="font-serif text-xl font-bold text-[#141619]">Official XML Sitemap URL</h3>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <a href="sitemap.xml" target="_blank" class="btn-gold px-4 py-2 rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center gap-1.5">
+              <span>View Live Sitemap.xml ↗</span>
+            </a>
+            <button onclick="copySitemapUrl()" class="px-4 py-2 rounded-lg border border-[#E7E0D5] bg-[#FAF8F5] text-xs font-semibold hover:bg-white flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-[#A8885B]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span>Copy Sitemap URL</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- URL Box -->
+        <div class="flex flex-col sm:flex-row items-center gap-3 p-3.5 bg-[#FAF8F5] rounded-xl border border-[#E7E0D5]">
+          <span class="text-xs font-semibold text-[#555E68] whitespace-nowrap">Sitemap Link:</span>
+          <input 
+            type="text" 
+            id="sitemap-url-display" 
+            readonly 
+            value="https://jaipurprimeproperty.in/sitemap.xml" 
+            class="w-full bg-white px-3.5 py-2 rounded-lg border border-stone-200 text-xs font-mono font-bold text-[#141619] select-all focus:outline-none"
+          >
+          <a href="https://search.google.com/search-console/sitemaps" target="_blank" class="whitespace-nowrap px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition-colors flex items-center gap-1">
+            <span>Submit to Google Search Console ↗</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-[#555E68] pt-1">
+          <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Auto-includes Images for Google Images</div>
+          <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Referenced in robots.txt</div>
+          <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Declared in &lt;head&gt; of index.html</div>
+        </div>
+      </div>
+
+      <!-- SEO Health Scorecard Banner -->
+      <div class="bg-gradient-to-br from-[#141619] to-[#202328] text-white p-6 sm:p-7 rounded-2xl border border-stone-800 shadow-xl relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-[#C5A880]/10 blur-2xl pointer-events-none"></div>
+        
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+          <div class="flex items-center gap-5">
+            <!-- Circular Score Dial -->
+            <div class="relative w-20 h-20 flex-shrink-0 flex items-center justify-center">
+              <svg class="w-20 h-20 -rotate-90" viewBox="0 0 36 36">
+                <path class="text-stone-700" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path id="seo-score-circle" class="text-[#D5BA8E] transition-all duration-700 ease-out" stroke-dasharray="98, 100" stroke-width="3.5" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+              </svg>
+              <div class="absolute flex flex-col items-center">
+                <span id="seo-score-text" class="text-xl font-bold font-serif text-[#D5BA8E] leading-none">98</span>
+                <span class="text-[9px] uppercase tracking-wider text-stone-400">Score</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-sm font-semibold text-[#D5BA8E]">SEO Health Status: Excellent</span>
+                <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/30">Top Ranking Tier</span>
+              </div>
+              <p class="text-xs text-stone-300 leading-relaxed max-w-xl">
+                Title tag length, meta description, image sitemap, Schema.org rich snippets, Open Graph tags, canonical link, GTM, and Meta Pixel are all properly active.
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick Audit Highlights -->
+          <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-xs text-stone-300 border-t md:border-t-0 md:border-l border-stone-800 pt-4 md:pt-0 md:pl-6">
+            <div class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Title &amp; Meta Description</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Schema.org JSON-LD</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Canonical URL active</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Open Graph Social cards</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Sitemap.xml Generated</div>
+            <div class="flex items-center gap-2"><span class="text-emerald-400">✓</span> GTM Container &amp; Pixel</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Visual Simulators: Google SERP & Social Share Previews -->
+      <div class="bg-white p-6 sm:p-7 rounded-2xl border border-[#E7E0D5] shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-[#E7E0D5]">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-[#A8885B]">Live Visual Simulators</span>
+            <h2 class="font-serif text-xl font-bold text-[#141619]">Live Google Search &amp; Social Appearance</h2>
+          </div>
+
+          <!-- Simulator Tab Selector -->
+          <div class="flex rounded-lg bg-[#FAF8F5] p-1 border border-[#E7E0D5] text-xs font-semibold">
+            <button type="button" onclick="setPreviewTab('google')" id="prev-tab-google" class="px-3 py-1.5 rounded-md bg-white text-[#141619] shadow-sm transition-all">Google SERP</button>
+            <button type="button" onclick="setPreviewTab('whatsapp')" id="prev-tab-whatsapp" class="px-3 py-1.5 rounded-md text-[#555E68] hover:text-[#141619] transition-all">WhatsApp Share</button>
+            <button type="button" onclick="setPreviewTab('facebook')" id="prev-tab-facebook" class="px-3 py-1.5 rounded-md text-[#555E68] hover:text-[#141619] transition-all">Facebook / LinkedIn</button>
+          </div>
+        </div>
+
+        <!-- 1. Google SERP Preview Container -->
+        <div id="preview-box-google" class="space-y-3">
+          <div class="flex items-center justify-between text-xs text-[#555E68]">
+            <span>Simulated Google Search Result (Desktop &amp; Mobile)</span>
+            <div class="flex items-center gap-4">
+              <span>Title Length: <strong id="title-char-badge" class="text-emerald-700">0/60</strong></span>
+              <span>Description Length: <strong id="desc-char-badge" class="text-emerald-700">0/160</strong></span>
+            </div>
+          </div>
+
+          <!-- Google Snippet Card -->
+          <div class="p-5 rounded-xl border border-stone-200 bg-white max-w-2xl font-sans text-left transition-all hover:shadow-md">
+            <div class="flex items-center gap-2 text-xs text-[#202124] mb-1">
+              <div class="w-6 h-6 rounded-full bg-white border border-stone-200 p-0.5 overflow-hidden flex items-center justify-center">
+                <img src="assets/images/favicon.jpg?v=20261005" alt="Favicon" class="w-full h-full object-cover">
+              </div>
+              <div class="flex flex-col leading-tight">
+                <span class="font-semibold text-xs text-[#202124]">Jaipur Prime Property</span>
+                <span class="text-[11px] text-[#5f6368]">https://jaipurprimeproperty.in</span>
+              </div>
+            </div>
+
+            <!-- Title Link -->
+            <h3 id="serp-preview-title" class="text-lg sm:text-xl text-[#1a0dab] hover:underline cursor-pointer font-medium leading-snug line-clamp-2">
+              Jaipur Prime Property | Premium Commercial &amp; Residential Plots in Jaipur
+            </h3>
+
+            <!-- Rich Snippet Stars -->
+            <div class="flex items-center gap-1.5 text-xs text-[#4d5156] mt-1 mb-1">
+              <span class="text-amber-500 tracking-wider">★★★★★</span>
+              <span class="font-semibold text-[#202124]">4.9</span>
+              <span>(48 reviews) · Real Estate Agency · Jaipur, Rajasthan</span>
+            </div>
+
+            <!-- Description -->
+            <p id="serp-preview-desc" class="text-xs sm:text-sm text-[#4d5156] leading-relaxed line-clamp-2">
+              Explore high-growth commercial &amp; residential plots across Diggi Road, Knowledge City, Mahindra World City, and Ajmer Road in Jaipur. Secure high-ROI real estate investments.
+            </p>
+
+            <!-- Sitelinks Simulator -->
+            <div class="mt-3 pt-3 border-t border-stone-100 grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+              <span class="text-[#1a0dab] hover:underline cursor-pointer">Commercial Plots</span>
+              <span class="text-[#1a0dab] hover:underline cursor-pointer">Mahindra World City</span>
+              <span class="text-[#1a0dab] hover:underline cursor-pointer">Knowledge City Plots</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. WhatsApp Share Preview Container -->
+        <div id="preview-box-whatsapp" class="hidden space-y-3">
+          <span class="text-xs text-[#555E68]">Simulated WhatsApp Chat Bubble Preview:</span>
+          <div class="max-w-md bg-[#DCF8C6] p-2.5 rounded-xl rounded-tr-none shadow border border-emerald-200">
+            <div class="bg-white rounded-lg overflow-hidden border border-emerald-100">
+              <img id="wa-preview-img" src="assets/images/logo-dark.jpg?v=20261005" alt="OG Image" class="w-full h-44 object-cover">
+              <div class="p-3">
+                <h4 id="wa-preview-title" class="font-bold text-sm text-[#141619] line-clamp-2">Jaipur Prime Property — Commercial Plots &amp; Investment Advisory in Jaipur</h4>
+                <p id="wa-preview-desc" class="text-xs text-[#555E68] mt-1 line-clamp-2">Verified JDA &amp; RERA approved commercial &amp; residential townships in Jaipur. Strategic locations with 200ft+ road frontage.</p>
+                <span class="text-[10px] text-stone-400 uppercase tracking-wider block mt-2">JAIPURPRIMEPROPERTY.IN</span>
+              </div>
+            </div>
+            <div class="text-[10px] text-emerald-800 text-right mt-1">11:42 AM · Sent</div>
+          </div>
+        </div>
+
+        <!-- 3. Facebook / LinkedIn Preview Container -->
+        <div id="preview-box-facebook" class="hidden space-y-3">
+          <span class="text-xs text-[#555E68]">Simulated Facebook / LinkedIn Feed Card:</span>
+          <div class="max-w-lg bg-white rounded-xl border border-stone-200 overflow-hidden shadow-sm">
+            <img id="fb-preview-img" src="assets/images/logo-dark.jpg?v=20261005" alt="OG Image" class="w-full h-52 object-cover">
+            <div class="p-4 bg-[#F2F3F5]">
+              <span class="text-[11px] text-[#65676B] uppercase font-semibold">JAIPURPRIMEPROPERTY.IN</span>
+              <h4 id="fb-preview-title" class="font-bold text-sm text-[#050505] line-clamp-2 mt-0.5">Jaipur Prime Property — Commercial Plots &amp; Investment Advisory in Jaipur</h4>
+              <p id="fb-preview-desc" class="text-xs text-[#65676B] line-clamp-2 mt-1">Verified JDA &amp; RERA approved commercial &amp; residential townships in Jaipur. Strategic locations with 200ft+ road frontage and world-class amenities.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SEO Form Container -->
+      <div class="bg-white rounded-2xl border border-[#E7E0D5] shadow-sm overflow-hidden">
+        
+        <!-- Inner Sub-Tabs -->
+        <div class="border-b border-[#E7E0D5] bg-[#FAF8F5] px-6 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-wider pt-3">
+          <button type="button" onclick="switchSeoSubTab('meta')" id="seosub-btn-meta" class="py-3 px-4 border-b-2 border-[#A8885B] text-[#141619] flex items-center gap-2">
+            <span>🏷️ Core Meta Tags</span>
+          </button>
+          <button type="button" onclick="switchSeoSubTab('social')" id="seosub-btn-social" class="py-3 px-4 border-b-2 border-transparent text-[#555E68] hover:text-[#141619] flex items-center gap-2">
+            <span>📱 Open Graph &amp; Social</span>
+          </button>
+          <button type="button" onclick="switchSeoSubTab('schema')" id="seosub-btn-schema" class="py-3 px-4 border-b-2 border-transparent text-[#555E68] hover:text-[#141619] flex items-center gap-2">
+            <span>🏗️ Schema.org (JSON-LD)</span>
+          </button>
+          <button type="button" onclick="switchSeoSubTab('projects')" id="seosub-btn-projects" class="py-3 px-4 border-b-2 border-transparent text-[#555E68] hover:text-[#141619] flex items-center gap-2">
+            <span>📍 Per-Plot SEO</span>
+          </button>
+          <button type="button" onclick="switchSeoSubTab('sitemap')" id="seosub-btn-sitemap" class="py-3 px-4 border-b-2 border-transparent text-[#555E68] hover:text-[#141619] flex items-center gap-2">
+            <span>🗺️ Sitemap &amp; Robots</span>
+          </button>
+          <button type="button" onclick="switchSeoSubTab('verification')" id="seosub-btn-verification" class="py-3 px-4 border-b-2 border-transparent text-[#555E68] hover:text-[#141619] flex items-center gap-2">
+            <span>🔍 Webmaster Tools</span>
+          </button>
+        </div>
+
+        <!-- Form -->
+        <form id="seo-main-form" onsubmit="saveSeoSettings(event); return false;" class="p-6 sm:p-8 space-y-6">
+          
+          <!-- SUB-TAB 1: Core Meta Tags -->
+          <div id="seosub-content-meta" class="space-y-6">
+            
+            <!-- Meta Title -->
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F]">
+                  Website Meta Title (<code class="text-xs">&lt;title&gt;</code>) *
+                </label>
+                <span id="meta-title-counter" class="text-xs font-mono text-[#555E68]">0 / 60 characters (Recommended: 50-60)</span>
+              </div>
+              <input 
+                type="text" 
+                id="seo-meta-title" 
+                oninput="handleMetaTitleInput()" 
+                placeholder="Jaipur Prime Property | Premium Commercial & Residential Plots in Jaipur" 
+                class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5] focus:bg-white focus:border-[#A8885B] font-medium"
+                required
+              >
+              <div class="w-full bg-stone-100 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                <div id="title-meter" class="h-full bg-emerald-500 transition-all duration-300" style="width: 80%;"></div>
+              </div>
+              <p class="text-[11px] text-[#555E68] mt-1">Headline displayed on Google search results and browser tabs.</p>
+            </div>
+
+            <!-- Meta Description -->
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F]">
+                  Meta Description (<code class="text-xs">&lt;meta name="description"&gt;</code>) *
+                </label>
+                <span id="meta-desc-counter" class="text-xs font-mono text-[#555E68]">0 / 160 characters (Recommended: 140-160)</span>
+              </div>
+              <textarea 
+                id="seo-meta-desc" 
+                rows="3" 
+                oninput="handleMetaDescInput()" 
+                placeholder="Explore high-growth commercial & residential plots across Diggi Road, Knowledge City, Mahindra World City, and Ajmer Road in Jaipur. Secure high-ROI real estate investments."
+                class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5] focus:bg-white focus:border-[#A8885B] leading-relaxed"
+                required
+              ></textarea>
+              <div class="w-full bg-stone-100 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                <div id="desc-meter" class="h-full bg-emerald-500 transition-all duration-300" style="width: 90%;"></div>
+              </div>
+              <p class="text-[11px] text-[#555E68] mt-1">Summarize investment value and location advantages for high search CTR.</p>
+            </div>
+
+            <!-- Target Keywords -->
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">
+                Target SEO Keywords (<code class="text-xs">&lt;meta name="keywords"&gt;</code>)
+              </label>
+              <textarea 
+                id="seo-keywords" 
+                rows="2" 
+                placeholder="commercial plots in Jaipur, residential plots in Jaipur, property investment Jaipur, Knowledge City Diggi Road plots" 
+                class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5] focus:bg-white focus:border-[#A8885B]"
+              ></textarea>
+              
+              <!-- Quick Keyword Chips -->
+              <div class="mt-2 flex flex-wrap gap-1.5 items-center">
+                <span class="text-[11px] text-[#555E68] mr-1">Quick Add:</span>
+                <button type="button" onclick="addKeywordChip('Commercial Plots Jaipur')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-[#FAF8F5] border border-stone-200 text-[11px] text-stone-700">+ Commercial Plots Jaipur</button>
+                <button type="button" onclick="addKeywordChip('Diggi Road Plots')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-[#FAF8F5] border border-stone-200 text-[11px] text-stone-700">+ Diggi Road Plots</button>
+                <button type="button" onclick="addKeywordChip('Mahindra World City Jaipur')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-[#FAF8F5] border border-stone-200 text-[11px] text-stone-700">+ Mahindra World City Jaipur</button>
+                <button type="button" onclick="addKeywordChip('Knowledge City Plots')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-[#FAF8F5] border border-stone-200 text-[11px] text-stone-700">+ Knowledge City Plots</button>
+                <button type="button" onclick="addKeywordChip('JDA &amp; RERA Approved')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-[#FAF8F5] border border-stone-200 text-[11px] text-stone-700">+ JDA &amp; RERA Approved</button>
+              </div>
+            </div>
+
+            <!-- Canonical URL & Robots Directives -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">
+                  Canonical URL
+                </label>
+                <input 
+                  type="url" 
+                  id="seo-canonical" 
+                  placeholder="https://jaipurprimeproperty.in/" 
+                  class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5] focus:bg-white font-mono"
+                >
+                <p class="text-[11px] text-[#555E68] mt-1">Prevents duplicate content issues by telling Google the authoritative domain URL.</p>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">
+                  Robots Meta Directives
+                </label>
+                <select id="seo-robots" class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5] focus:bg-white font-mono">
+                  <option value="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">index, follow (Recommended for maximum SEO)</option>
+                  <option value="index, follow">index, follow (Standard)</option>
+                  <option value="noindex, follow">noindex, follow (Hide from search, follow links)</option>
+                  <option value="noindex, nofollow">noindex, nofollow (Complete privacy)</option>
+                </select>
+                <p class="text-[11px] text-[#555E68] mt-1">Instructions for search engine crawlers and robots.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SUB-TAB 2: Social Media & Open Graph -->
+          <div id="seosub-content-social" class="hidden space-y-6">
+            
+            <!-- OG Title -->
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">
+                Open Graph Title (<code class="text-xs">og:title</code>)
+              </label>
+              <input 
+                type="text" 
+                id="seo-og-title" 
+                oninput="handleSocialInput()" 
+                placeholder="Jaipur Prime Property — Commercial Plots &amp; Investment Advisory in Jaipur" 
+                class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5] focus:bg-white"
+              >
+              <p class="text-[11px] text-[#555E68] mt-1">Headline used when sharing your website on WhatsApp, Facebook, LinkedIn.</p>
+            </div>
+
+            <!-- OG Description -->
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">
+                Open Graph Description (<code class="text-xs">og:description</code>)
+              </label>
+              <textarea 
+                id="seo-og-desc" 
+                rows="2" 
+                oninput="handleSocialInput()" 
+                placeholder="Verified JDA &amp; RERA approved commercial &amp; residential townships in Jaipur. Strategic locations with 200ft+ road frontage and world-class amenities." 
+                class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5] focus:bg-white"
+              ></textarea>
+            </div>
+
+            <!-- OG Image -->
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">
+                Social Share Preview Image (<code class="text-xs">og:image</code>)
+              </label>
+              <input 
+                type="text" 
+                id="seo-og-image" 
+                oninput="handleSocialInput()" 
+                placeholder="assets/images/logo-dark.jpg?v=20261005" 
+                class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5] focus:bg-white font-mono"
+              >
+              <!-- Quick Image Selectors -->
+              <div class="mt-3 flex items-center gap-3">
+                <span class="text-xs text-[#555E68]">Quick Select Preset:</span>
+                <button type="button" onclick="setOgImagePreset('assets/images/logo-dark.jpg?v=20261005')" class="px-2.5 py-1 rounded bg-stone-100 hover:bg-[#FAF8F5] border border-stone-200 text-xs font-semibold">Dark Logo Crest</button>
+                <button type="button" onclick="setOgImagePreset('assets/covers/facebook-cover-dark-1640x624.jpg')" class="px-2.5 py-1 rounded bg-stone-100 hover:bg-[#FAF8F5] border border-stone-200 text-xs font-semibold">Banner 1640x624</button>
+                <button type="button" onclick="setOgImagePreset('assets/images/property-prop-1789803364773.jpg')" class="px-2.5 py-1 rounded bg-stone-100 hover:bg-[#FAF8F5] border border-stone-200 text-xs font-semibold">Knowledge Park Photo</button>
+                <button type="button" onclick="setOgImagePreset('assets/images/property-prop-1789795429112.jpg')" class="px-2.5 py-1 rounded bg-stone-100 hover:bg-[#FAF8F5] border border-stone-200 text-xs font-semibold">Nexara Photo</button>
+              </div>
+            </div>
+
+            <!-- Twitter Card Type -->
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">
+                Twitter / X Card Format
+              </label>
+              <select id="seo-twitter-card" class="w-full sm:w-72 px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5] focus:bg-white font-mono">
+                <option value="summary_large_image">summary_large_image (Large prominent banner)</option>
+                <option value="summary">summary (Compact thumbnail)</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- SUB-TAB 3: Schema.org Structured Data -->
+          <div id="seosub-content-schema" class="hidden space-y-6">
+            
+            <div class="bg-amber-50/60 p-4 rounded-xl border border-amber-200 text-xs text-amber-900 flex items-start gap-3">
+              <span class="text-lg">💡</span>
+              <div>
+                <strong class="font-semibold">Why Schema.org Matters:</strong> Google uses this structured JSON-LD data to verify your brand as a registered <em>RealEstateAgent</em> in Jaipur, generating knowledge graphs, rich review ratings, and local discovery.
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">Business Name</label>
+                <input type="text" id="schema-name" oninput="updateJsonLdPreview()" placeholder="Jaipur Prime Property" class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">Business Type</label>
+                <select id="schema-type" onchange="updateJsonLdPreview()" class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
+                  <option value="RealEstateAgent">RealEstateAgent (Recommended)</option>
+                  <option value="LocalBusiness">LocalBusiness</option>
+                  <option value="Organization">Organization</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">Price Range</label>
+                <input type="text" id="schema-price" oninput="updateJsonLdPreview()" placeholder="$$$$" class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">Areas Served</label>
+                <input type="text" id="schema-areas" oninput="updateJsonLdPreview()" placeholder="Jaipur, Diggi Road, Knowledge City, Mahindra World City, Ajmer Road" class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5]">
+              </div>
+            </div>
+
+            <!-- Live JSON-LD Output Box -->
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F]">Generated JSON-LD Structured Data Output</label>
+                <div class="flex items-center gap-3">
+                  <button type="button" onclick="copyJsonLd()" class="text-xs text-[#A8885B] font-semibold hover:underline flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    Copy JSON-LD
+                  </button>
+                  <a href="https://search.google.com/test/rich-results?url=https%3A%2F%2Fjaipurprimeproperty.in%2F" target="_blank" class="text-xs text-[#A8885B] font-semibold hover:underline">Test with Google Rich Results ↗</a>
+                </div>
+              </div>
+              <pre id="jsonld-preview" class="p-4 rounded-xl bg-[#0B0D0F] text-[#D5BA8E] font-mono text-xs overflow-x-auto max-h-52 border border-stone-800 leading-relaxed"></pre>
+            </div>
+
+          </div>
+
+          <!-- SUB-TAB 4: Per-Plot SEO -->
+          <div id="seosub-content-projects" class="hidden space-y-6">
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">Select Property Listing</label>
+              <select id="seo-project-select" onchange="loadProjectSeoFields()" class="w-full sm:w-96 px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-[#FAF8F5] font-medium">
+                <!-- Dynamically populated -->
+              </select>
+            </div>
+
+            <div class="p-6 rounded-2xl border border-[#E7E0D5] bg-[#FAF8F5]/60 space-y-4">
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">Listing Custom SEO Title</label>
+                <input type="text" id="proj-seo-title" placeholder="Chart Knowledge Park Plots | Opposite Knowledge City, Diggi Road, Jaipur" class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-white">
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">Listing Custom SEO Description</label>
+                <textarea id="proj-seo-desc" rows="2" placeholder="300 Bigha mega residential &amp; commercial township opposite Knowledge City on Diggi Road. 200ft main road frontage." class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-white"></textarea>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">Listing Custom Keywords</label>
+                <input type="text" id="proj-seo-kw" placeholder="Chart Knowledge Park, Diggi Road plots, Knowledge City Jaipur" class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-white">
+              </div>
+
+              <button type="button" onclick="saveCurrentProjectSeo()" class="px-5 py-2.5 rounded-xl bg-[#141619] text-white text-xs uppercase tracking-wider font-semibold hover:bg-stone-800 transition-colors">
+                Save Listing SEO
+              </button>
+            </div>
+          </div>
+
+          <!-- SUB-TAB 5: Sitemap & Robots.txt -->
+          <div id="seosub-content-sitemap" class="hidden space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <!-- sitemap.xml -->
+              <div class="bg-[#FAF8F5] p-5 rounded-2xl border border-[#E7E0D5] space-y-3">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="font-serif text-lg font-bold text-[#141619]">sitemap.xml</h4>
+                    <p class="text-xs text-[#555E68]">Directs Googlebot to index all pages and property images.</p>
+                  </div>
+                  <span class="px-2 py-0.5 rounded text-[10px] bg-emerald-100 text-emerald-800 font-semibold">Live Active</span>
+                </div>
+
+                <div class="p-3 bg-white rounded-xl border border-[#E7E0D5] font-mono text-[11px] text-stone-700 max-h-40 overflow-y-auto whitespace-pre leading-relaxed">https://jaipurprimeproperty.in/ (Priority 1.0)
+Including Image Metadata:
+• logo-dark.jpg
+• property-prop-1789803364773.jpg (Knowledge Park)
+• property-prop-1789795429112.jpg (Nexara)</div>
+
+                <div class="flex items-center gap-2 pt-1">
+                  <a href="sitemap.xml" target="_blank" class="px-3.5 py-1.5 rounded-lg border border-[#E7E0D5] text-xs font-semibold hover:bg-white flex items-center gap-1">
+                    <span>View Live Sitemap ↗</span>
+                  </a>
+                  <button type="button" onclick="downloadSitemapFile()" class="px-3.5 py-1.5 rounded-lg bg-white border border-[#E7E0D5] text-xs font-semibold hover:bg-stone-50">
+                    Download XML
+                  </button>
+                </div>
+              </div>
+
+              <!-- robots.txt -->
+              <div class="bg-[#FAF8F5] p-5 rounded-2xl border border-[#E7E0D5] space-y-3">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="font-serif text-lg font-bold text-[#141619]">robots.txt</h4>
+                    <p class="text-xs text-[#555E68]">Protects admin portals &amp; links Google directly to sitemap.</p>
+                  </div>
+                  <span class="px-2 py-0.5 rounded text-[10px] bg-emerald-100 text-emerald-800 font-semibold">Live Active</span>
+                </div>
+
+                <div class="p-3 bg-white rounded-xl border border-[#E7E0D5] font-mono text-[11px] text-stone-700 max-h-40 overflow-y-auto whitespace-pre leading-relaxed">User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /seo-admin.html
+Disallow: /covers.html
+
+Sitemap: https://jaipurprimeproperty.in/sitemap.xml</div>
+
+                <div class="flex items-center gap-2 pt-1">
+                  <a href="robots.txt" target="_blank" class="px-3.5 py-1.5 rounded-lg border border-[#E7E0D5] text-xs font-semibold hover:bg-white flex items-center gap-1">
+                    <span>View Live robots.txt ↗</span>
+                  </a>
+                  <button type="button" onclick="downloadRobotsFile()" class="px-3.5 py-1.5 rounded-lg bg-white border border-[#E7E0D5] text-xs font-semibold hover:bg-stone-50">
+                    Download TXT
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUB-TAB 6: Webmaster Verification -->
+          <div id="seosub-content-verification" class="hidden space-y-6">
+            
+            <!-- Google Search Console -->
+            <div class="p-5 rounded-2xl border border-[#E7E0D5] bg-[#FAF8F5] space-y-3">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h4 class="font-serif text-lg font-bold text-[#141619]">Google Search Console Verification</h4>
+                  <p class="text-xs text-[#555E68]">Paste your verification content token to claim domain ownership in Google Search Console.</p>
+                </div>
+                <a href="https://search.google.com/search-console" target="_blank" class="text-xs text-[#A8885B] font-semibold underline">Open Search Console ↗</a>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">
+                  HTML Tag Token Key (<code class="text-xs">google-site-verification</code>)
+                </label>
+                <input 
+                  type="text" 
+                  id="seo-google-verif" 
+                  placeholder="e.g. dB9m0q_9WjX_vYp3a8z7KqR6s5t4u3v2w1" 
+                  class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-white font-mono"
+                >
+                <p class="text-[11px] text-[#555E68] mt-1">If Google provides <code>&lt;meta name="google-site-verification" content="XYZ" /&gt;</code>, paste <code>XYZ</code> above.</p>
+              </div>
+            </div>
+
+            <!-- Bing Webmaster Tools -->
+            <div class="p-5 rounded-2xl border border-[#E7E0D5] bg-[#FAF8F5] space-y-3">
+              <div>
+                <h4 class="font-serif text-lg font-bold text-[#141619]">Bing Webmaster Tools Verification</h4>
+                <p class="text-xs text-[#555E68]">Monitor indexation across Microsoft Bing search.</p>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-[#33383F] mb-1">
+                  Bing Verification Code
+                </label>
+                <input 
+                  type="text" 
+                  id="seo-bing-verif" 
+                  placeholder="e.g. F8D7C6B5A4938271605948372615" 
+                  class="w-full px-4 py-2.5 rounded-xl border border-[#E7E0D5] text-sm bg-white font-mono"
+                >
+              </div>
+            </div>
+
+            <!-- Tracking Stack Status Checklist -->
+            <div class="p-5 rounded-2xl border border-[#E7E0D5] bg-white space-y-3">
+              <h4 class="font-serif text-lg font-bold text-[#141619]">Active Tracking Stack</h4>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="p-3.5 rounded-xl border border-emerald-200 bg-emerald-50/50 flex items-center justify-between">
+                  <div>
+                    <span class="block text-[11px] font-semibold uppercase text-emerald-800">Google Tag Manager</span>
+                    <code class="text-xs text-emerald-950 font-bold">GTM-M4XLZQ2J</code>
+                  </div>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                </div>
+
+                <div class="p-3.5 rounded-xl border border-blue-200 bg-blue-50/50 flex items-center justify-between">
+                  <div>
+                    <span class="block text-[11px] font-semibold uppercase text-blue-800">Meta Pixel</span>
+                    <code class="text-xs text-blue-950 font-bold">1823586112129662</code>
+                  </div>
+                  <span class="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse"></span>
+                </div>
+
+                <div class="p-3.5 rounded-xl border border-amber-200 bg-amber-50/50 flex items-center justify-between">
+                  <div>
+                    <span class="block text-[11px] font-semibold uppercase text-amber-800">SSL Certificate</span>
+                    <code class="text-xs text-amber-950 font-bold">HTTPS Enforced</code>
+                  </div>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Footer Save Bar -->
+          <div class="pt-6 border-t border-[#E7E0D5] flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <button type="submit" class="btn-gold px-8 py-3 rounded-xl text-xs uppercase tracking-wider font-bold shadow-md flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span>Save SEO Configuration</span>
+              </button>
+              <button type="button" onclick="resetDefaultSeo()" class="px-4 py-3 rounded-xl border border-stone-200 text-xs font-semibold text-stone-600 hover:bg-stone-50">
+                Reset Defaults
+              </button>
+            </div>
+
+            <span class="text-xs text-[#555E68]">
+              Saved to site-data.json. Visit <strong>Publish Live</strong> to push changes to GitHub Pages.
+            </span>
+          </div>
+
+        </form>
+
+      </div>
+
+    </main>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    let siteData = null;
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      initAuth();
+      await loadData();
+      populateSeoForm();
+    });
+
+    function initAuth() {
+      const pinForm = document.getElementById('pin-form');
+      const pinInput = document.getElementById('pin-input');
+      const pinError = document.getElementById('pin-error');
+      const authScreen = document.getElementById('auth-screen');
+      const dashboard = document.getElementById('seo-dashboard');
+
+      if (sessionStorage.getItem('khoraniya_authenticated') === 'true') {
+        authScreen.classList.add('hidden');
+        dashboard.classList.remove('hidden');
+      }
+
+      pinForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const savedPin = localStorage.getItem('khoraniya_admin_pin') || '1234';
+        if (pinInput.value.trim() === savedPin) {
+          sessionStorage.setItem('khoraniya_authenticated', 'true');
+          authScreen.classList.add('hidden');
+          dashboard.classList.remove('hidden');
+        } else {
+          pinError.classList.remove('hidden');
+          pinInput.value = '';
+          pinInput.focus();
+        }
+      });
+    }
+
+    function logout() {
+      sessionStorage.removeItem('khoraniya_authenticated');
+      location.reload();
+    }
+
+    async function loadData() {
+      try {
+        const res = await fetch('assets/data/site-data.json?t=' + Date.now());
+        if (res.ok) {
+          siteData = await res.json();
+        }
+      } catch (err) {
+        console.warn('Failed to fetch server JSON:', err);
+      }
+
+      if (!siteData) {
+        try {
+          const raw = localStorage.getItem('khoraniya_site_data');
+          if (raw) siteData = JSON.parse(raw);
+        } catch (e) {}
+      }
+    }
+
+    async function saveLocalData() {
+      if (!siteData) return;
+      siteData.updatedAt = Date.now();
+      try {
+        localStorage.setItem('khoraniya_site_data', JSON.stringify(siteData));
+      } catch (e) {}
+
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        try {
+          fetch('/api/save-site-data', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(siteData, null, 2)
+          });
+        } catch(e) {}
+      }
+    }
+
+    function copySitemapUrl() {
+      const input = document.getElementById('sitemap-url-display');
+      if (!input) return;
+      navigator.clipboard.writeText(input.value).then(() => {
+        showToast('Sitemap URL copied: https://jaipurprimeproperty.in/sitemap.xml');
+      }).catch(() => {
+        showToast('Copied sitemap URL!');
+      });
+    }
+
+    function switchSeoSubTab(subTabId) {
+      ['meta', 'social', 'schema', 'projects', 'sitemap', 'verification'].forEach(st => {
+        const content = document.getElementById(`seosub-content-${st}`);
+        const btn = document.getElementById(`seosub-btn-${st}`);
+        if (content) content.classList.add('hidden');
+        if (btn) {
+          btn.classList.remove('border-[#A8885B]', 'text-[#141619]');
+          btn.classList.add('border-transparent', 'text-[#555E68]');
+        }
+      });
+
+      const targetContent = document.getElementById(`seosub-content-${subTabId}`);
+      const targetBtn = document.getElementById(`seosub-btn-${subTabId}`);
+      if (targetContent) targetContent.classList.remove('hidden');
+      if (targetBtn) {
+        targetBtn.classList.add('border-[#A8885B]', 'text-[#141619]');
+        targetBtn.classList.remove('border-transparent', 'text-[#555E68]');
+      }
+    }
+
+    function setPreviewTab(prevId) {
+      ['google', 'whatsapp', 'facebook'].forEach(p => {
+        const box = document.getElementById(`preview-box-${p}`);
+        const btn = document.getElementById(`prev-tab-${p}`);
+        if (box) box.classList.add('hidden');
+        if (btn) {
+          btn.classList.remove('bg-white', 'text-[#141619]', 'shadow-sm');
+          btn.classList.add('text-[#555E68]');
+        }
+      });
+
+      const targetBox = document.getElementById(`preview-box-${prevId}`);
+      const targetBtn = document.getElementById(`prev-tab-${prevId}`);
+      if (targetBox) targetBox.classList.remove('hidden');
+      if (targetBtn) {
+        targetBtn.classList.add('bg-white', 'text-[#141619]', 'shadow-sm');
+        targetBtn.classList.remove('text-[#555E68]');
+      }
+    }
+
+    function populateSeoForm() {
+      if (!siteData) return;
+      const seo = siteData.seo || {};
+
+      const titleInput = document.getElementById('seo-meta-title');
+      const descInput = document.getElementById('seo-meta-desc');
+      const kwInput = document.getElementById('seo-keywords');
+      const canonInput = document.getElementById('seo-canonical');
+      const robotsInput = document.getElementById('seo-robots');
+
+      const ogTitleInput = document.getElementById('seo-og-title');
+      const ogDescInput = document.getElementById('seo-og-desc');
+      const ogImgInput = document.getElementById('seo-og-image');
+      const twCardInput = document.getElementById('seo-twitter-card');
+
+      const gVerifInput = document.getElementById('seo-google-verif');
+      const bVerifInput = document.getElementById('seo-bing-verif');
+
+      if (titleInput) titleInput.value = seo.metaTitle || 'Jaipur Prime Property | Premium Commercial & Residential Plots in Jaipur';
+      if (descInput) descInput.value = seo.metaDescription || 'Explore high-growth commercial & residential plots across Diggi Road, Knowledge City, Mahindra World City, and Ajmer Road in Jaipur. Secure high-ROI real estate investments.';
+      if (kwInput) kwInput.value = seo.keywords || 'commercial plots in Jaipur, residential plots in Jaipur, property investment Jaipur, Knowledge City Diggi Road plots, Mahindra World City Ajmer Road plots, Jaipur Prime Property, JPP';
+      if (canonInput) canonInput.value = seo.canonicalUrl || 'https://jaipurprimeproperty.in/';
+      if (robotsInput) robotsInput.value = seo.robots || 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+
+      if (ogTitleInput) ogTitleInput.value = seo.ogTitle || 'Jaipur Prime Property — Commercial Plots & Investment Advisory in Jaipur';
+      if (ogDescInput) ogDescInput.value = seo.ogDescription || 'Verified JDA & RERA approved commercial & residential townships in Jaipur. Strategic locations with 200ft+ road frontage and world-class amenities.';
+      if (ogImgInput) ogImgInput.value = seo.ogImage || 'assets/images/logo-dark.jpg?v=20261005';
+      if (twCardInput) twCardInput.value = seo.twitterCard || 'summary_large_image';
+
+      if (gVerifInput) gVerifInput.value = seo.googleVerification || '';
+      if (bVerifInput) bVerifInput.value = seo.bingVerification || '';
+
+      const schema = seo.schema || {};
+      const scName = document.getElementById('schema-name');
+      const scType = document.getElementById('schema-type');
+      const scPrice = document.getElementById('schema-price');
+      const scAreas = document.getElementById('schema-areas');
+
+      if (scName) scName.value = schema.businessName || 'Jaipur Prime Property';
+      if (scType) scType.value = schema.businessType || 'RealEstateAgent';
+      if (scPrice) scPrice.value = schema.priceRange || '$$$$';
+      if (scAreas) scAreas.value = Array.isArray(schema.areaServed) ? schema.areaServed.join(', ') : (schema.areaServed || 'Jaipur, Diggi Road, Knowledge City, Mahindra World City, Ajmer Road');
+
+      const projSelect = document.getElementById('seo-project-select');
+      if (projSelect && Array.isArray(siteData.properties)) {
+        projSelect.innerHTML = siteData.properties.map(p => `<option value="${escapeHtml(p.id)}">${escapeHtml(p.title || p.id)}</option>`).join('');
+        loadProjectSeoFields();
+      }
+
+      handleMetaTitleInput();
+      handleMetaDescInput();
+      handleSocialInput();
+      updateJsonLdPreview();
+      calcSeoScore();
+    }
+
+    function handleMetaTitleInput() {
+      const title = document.getElementById('seo-meta-title')?.value || '';
+      const counter = document.getElementById('meta-title-counter');
+      const badge = document.getElementById('title-char-badge');
+      const meter = document.getElementById('title-meter');
+      const preview = document.getElementById('serp-preview-title');
+
+      const len = title.length;
+      if (counter) counter.textContent = `${len} / 60 characters (Recommended: 50-60)`;
+      if (badge) badge.textContent = `${len}/60`;
+      if (preview) preview.textContent = title || 'Jaipur Prime Property | Premium Commercial & Residential Plots in Jaipur';
+
+      if (meter) {
+        const pct = Math.min(100, Math.round((len / 60) * 100));
+        meter.style.width = pct + '%';
+        if (len >= 45 && len <= 65) {
+          meter.className = 'h-full bg-emerald-500 transition-all duration-300';
+          if (badge) badge.className = 'text-emerald-700';
+        } else if (len > 65) {
+          meter.className = 'h-full bg-rose-500 transition-all duration-300';
+          if (badge) badge.className = 'text-rose-600';
+        } else {
+          meter.className = 'h-full bg-amber-500 transition-all duration-300';
+          if (badge) badge.className = 'text-amber-600';
+        }
+      }
+      calcSeoScore();
+    }
+
+    function handleMetaDescInput() {
+      const desc = document.getElementById('seo-meta-desc')?.value || '';
+      const counter = document.getElementById('meta-desc-counter');
+      const badge = document.getElementById('desc-char-badge');
+      const meter = document.getElementById('desc-meter');
+      const preview = document.getElementById('serp-preview-desc');
+
+      const len = desc.length;
+      if (counter) counter.textContent = `${len} / 160 characters (Recommended: 140-160)`;
+      if (badge) badge.textContent = `${len}/160`;
+      if (preview) preview.textContent = desc || 'Explore high-growth commercial & residential plots across Diggi Road, Knowledge City, Mahindra World City, and Ajmer Road in Jaipur.';
+
+      if (meter) {
+        const pct = Math.min(100, Math.round((len / 160) * 100));
+        meter.style.width = pct + '%';
+        if (len >= 120 && len <= 165) {
+          meter.className = 'h-full bg-emerald-500 transition-all duration-300';
+          if (badge) badge.className = 'text-emerald-700';
+        } else if (len > 165) {
+          meter.className = 'h-full bg-rose-500 transition-all duration-300';
+          if (badge) badge.className = 'text-rose-600';
+        } else {
+          meter.className = 'h-full bg-amber-500 transition-all duration-300';
+          if (badge) badge.className = 'text-amber-600';
+        }
+      }
+      calcSeoScore();
+    }
+
+    function handleSocialInput() {
+      const ogTitle = document.getElementById('seo-og-title')?.value || document.getElementById('seo-meta-title')?.value || '';
+      const ogDesc = document.getElementById('seo-og-desc')?.value || document.getElementById('seo-meta-desc')?.value || '';
+      const ogImg = document.getElementById('seo-og-image')?.value || 'assets/images/logo-dark.jpg?v=20261005';
+
+      const waTitle = document.getElementById('wa-preview-title');
+      const waDesc = document.getElementById('wa-preview-desc');
+      const waImg = document.getElementById('wa-preview-img');
+
+      const fbTitle = document.getElementById('fb-preview-title');
+      const fbDesc = document.getElementById('fb-preview-desc');
+      const fbImg = document.getElementById('fb-preview-img');
+
+      if (waTitle) waTitle.textContent = ogTitle;
+      if (waDesc) waDesc.textContent = ogDesc;
+      if (waImg) waImg.src = ogImg;
+
+      if (fbTitle) fbTitle.textContent = ogTitle;
+      if (fbDesc) fbDesc.textContent = ogDesc;
+      if (fbImg) fbImg.src = ogImg;
+    }
+
+    function addKeywordChip(kw) {
+      const input = document.getElementById('seo-keywords');
+      if (!input) return;
+      const current = input.value.trim();
+      if (!current) {
+        input.value = kw;
+      } else if (!current.toLowerCase().includes(kw.toLowerCase())) {
+        input.value = current.replace(/,\s*$/, '') + ', ' + kw;
+      }
+      showToast(`Added "${kw}" to target keywords!`);
+      calcSeoScore();
+    }
+
+    function setOgImagePreset(url) {
+      const input = document.getElementById('seo-og-image');
+      if (input) {
+        input.value = url;
+        handleSocialInput();
+        showToast('Social preview image updated!');
+      }
+    }
+
+    function updateJsonLdPreview() {
+      const name = document.getElementById('schema-name')?.value || 'Jaipur Prime Property';
+      const type = document.getElementById('schema-type')?.value || 'RealEstateAgent';
+      const price = document.getElementById('schema-price')?.value || '$$$$';
+      const areasStr = document.getElementById('schema-areas')?.value || 'Jaipur, Diggi Road, Knowledge City, Mahindra World City, Ajmer Road';
+
+      const areas = areasStr.split(',').map(s => s.trim()).filter(Boolean);
+
+      const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": type,
+        "name": name,
+        "legalName": name,
+        "description": "Premium commercial plots and real estate investment advisory in Jaipur, Rajasthan, India.",
+        "url": "https://jaipurprimeproperty.in",
+        "telephone": "+918824348273",
+        "email": "jaipurprimeproperty77@gmail.com",
+        "priceRange": price,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Opposite Knowledge City, Diggi Road / Mahindra World City, Ajmer Road",
+          "addressLocality": "Jaipur",
+          "addressRegion": "Rajasthan",
+          "postalCode": "302001",
+          "addressCountry": "India"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "26.9124",
+          "longitude": "75.7873"
+        },
+        "areaServed": areas,
+        "sameAs": [
+          "https://www.facebook.com/jaipurprimeproperty",
+          "https://www.instagram.com/jaipurprimeproperty"
+        ]
+      };
+
+      const pre = document.getElementById('jsonld-preview');
+      if (pre) {
+        pre.textContent = JSON.stringify(jsonLd, null, 2);
+      }
+    }
+
+    function copyJsonLd() {
+      const pre = document.getElementById('jsonld-preview');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.textContent).then(() => {
+        showToast('JSON-LD copied to clipboard!');
+      }).catch(() => {
+        showToast('Copied to clipboard');
+      });
+    }
+
+    function loadProjectSeoFields() {
+      if (!siteData) return;
+      const select = document.getElementById('seo-project-select');
+      if (!select) return;
+      const propId = select.value;
+      const projSeo = siteData.seo?.projectSeo?.[propId] || {};
+
+      const titleInput = document.getElementById('proj-seo-title');
+      const descInput = document.getElementById('proj-seo-desc');
+      const kwInput = document.getElementById('proj-seo-kw');
+
+      const prop = (siteData.properties || []).find(p => p.id === propId);
+      const defaultTitle = prop ? `${prop.title} Plots | ${prop.location}` : '';
+      const defaultDesc = prop ? `Exclusive commercial and residential plots at ${prop.title}, ${prop.location}.` : '';
+      const defaultKw = prop ? `${prop.title}, plots in ${prop.location}, Jaipur real estate` : '';
+
+      if (titleInput) titleInput.value = projSeo.metaTitle || defaultTitle;
+      if (descInput) descInput.value = projSeo.metaDescription || defaultDesc;
+      if (kwInput) kwInput.value = projSeo.keywords || defaultKw;
+    }
+
+    function saveCurrentProjectSeo() {
+      if (!siteData) return;
+      const select = document.getElementById('seo-project-select');
+      if (!select) return;
+      const propId = select.value;
+
+      if (!siteData.seo) siteData.seo = {};
+      if (!siteData.seo.projectSeo) siteData.seo.projectSeo = {};
+
+      siteData.seo.projectSeo[propId] = {
+        metaTitle: document.getElementById('proj-seo-title')?.value.trim() || '',
+        metaDescription: document.getElementById('proj-seo-desc')?.value.trim() || '',
+        keywords: document.getElementById('proj-seo-kw')?.value.trim() || ''
+      };
+
+      saveLocalData();
+      showToast('Listing custom SEO saved!');
+    }
+
+    async function saveSeoSettings(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      if (!siteData) return;
+
+      if (!siteData.seo) siteData.seo = {};
+
+      siteData.seo.metaTitle = document.getElementById('seo-meta-title')?.value.trim() || '';
+      siteData.seo.metaDescription = document.getElementById('seo-meta-desc')?.value.trim() || '';
+      siteData.seo.keywords = document.getElementById('seo-keywords')?.value.trim() || '';
+      siteData.seo.canonicalUrl = document.getElementById('seo-canonical')?.value.trim() || 'https://jaipurprimeproperty.in/';
+      siteData.seo.robots = document.getElementById('seo-robots')?.value || 'index, follow';
+
+      siteData.seo.ogTitle = document.getElementById('seo-og-title')?.value.trim() || siteData.seo.metaTitle;
+      siteData.seo.ogDescription = document.getElementById('seo-og-desc')?.value.trim() || siteData.seo.metaDescription;
+      siteData.seo.ogImage = document.getElementById('seo-og-image')?.value.trim() || 'assets/images/logo-dark.jpg?v=20261005';
+      siteData.seo.twitterCard = document.getElementById('seo-twitter-card')?.value || 'summary_large_image';
+
+      siteData.seo.googleVerification = document.getElementById('seo-google-verif')?.value.trim() || '';
+      siteData.seo.bingVerification = document.getElementById('seo-bing-verif')?.value.trim() || '';
+
+      const areasStr = document.getElementById('schema-areas')?.value || '';
+      siteData.seo.schema = {
+        businessName: document.getElementById('schema-name')?.value.trim() || 'Jaipur Prime Property',
+        businessType: document.getElementById('schema-type')?.value || 'RealEstateAgent',
+        priceRange: document.getElementById('schema-price')?.value.trim() || '$$$$',
+        areaServed: areasStr.split(',').map(s => s.trim()).filter(Boolean),
+        latitude: '26.9124',
+        longitude: '75.7873',
+        telephone: '+918824348273',
+        email: 'jaipurprimeproperty77@gmail.com',
+        url: 'https://jaipurprimeproperty.in'
+      };
+
+      await saveLocalData();
+      calcSeoScore();
+      showToast('SEO Configuration saved successfully!');
+    }
+
+    function resetDefaultSeo() {
+      if (!confirm('Reset all SEO settings to recommended defaults?')) return;
+      if (!siteData) return;
+
+      siteData.seo = {
+        metaTitle: "Jaipur Prime Property | Premium Commercial & Residential Plots in Jaipur",
+        metaDescription: "Explore high-growth commercial & residential plots across Diggi Road, Knowledge City, Mahindra World City, and Ajmer Road in Jaipur. Secure high-ROI real estate investments.",
+        keywords: "commercial plots in Jaipur, residential plots in Jaipur, property investment Jaipur, commercial real estate Jaipur, Knowledge City Diggi Road plots, Mahindra World City Ajmer Road plots, Jaipur Prime Property, JPP",
+        canonicalUrl: "https://jaipurprimeproperty.in/",
+        robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        ogTitle: "Jaipur Prime Property — Commercial Plots & Investment Advisory in Jaipur",
+        ogDescription: "Verified JDA & RERA approved commercial & residential townships in Jaipur. Strategic locations with 200ft+ road frontage and world-class amenities.",
+        ogImage: "assets/images/logo-dark.jpg?v=20261005",
+        twitterCard: "summary_large_image",
+        googleVerification: "",
+        bingVerification: "",
+        schema: {
+          businessName: "Jaipur Prime Property",
+          businessType: "RealEstateAgent",
+          priceRange: "$$$$",
+          areaServed: ["Jaipur", "Diggi Road", "Knowledge City", "Ajmer Road", "Mahindra World City"]
+        }
+      };
+
+      populateSeoForm();
+      saveLocalData();
+      showToast('SEO settings reset to recommended defaults!');
+    }
+
+    function calcSeoScore() {
+      let score = 50;
+      const title = document.getElementById('seo-meta-title')?.value.trim() || '';
+      const desc = document.getElementById('seo-meta-desc')?.value.trim() || '';
+      const kw = document.getElementById('seo-keywords')?.value.trim() || '';
+      const canon = document.getElementById('seo-canonical')?.value.trim() || '';
+      const ogImg = document.getElementById('seo-og-image')?.value.trim() || '';
+
+      if (title.length >= 40 && title.length <= 65) score += 15;
+      else if (title.length > 0) score += 8;
+
+      if (desc.length >= 120 && desc.length <= 165) score += 15;
+      else if (desc.length > 0) score += 8;
+
+      if (kw.length > 20) score += 5;
+      if (canon.startsWith('https://')) score += 5;
+      if (ogImg.length > 5) score += 5;
+      score += 5;
+
+      score = Math.min(100, Math.max(30, score));
+
+      const scoreText = document.getElementById('seo-score-text');
+      const scoreCircle = document.getElementById('seo-score-circle');
+      if (scoreText) scoreText.textContent = score;
+      if (scoreCircle) scoreCircle.setAttribute('stroke-dasharray', `${score}, 100`);
+    }
+
+    function downloadSitemapFile() {
+      window.open('sitemap.xml', '_blank');
+    }
+
+    function downloadRobotsFile() {
+      window.open('robots.txt', '_blank');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      toastMsg.textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3000);
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+  </script>
+</body>
+</html>

@@ -95,6 +95,7 @@ let propertyLookup = {};
 
 document.addEventListener('DOMContentLoaded', async () => {
   await loadSiteData();
+  applySEO();
   renderProperties();
   bindContactInfo();
   initNavigation();
@@ -250,6 +251,7 @@ async function loadSiteData() {
       window.currentSiteData = {
         contact: baseContact,
         properties: allProps,
+        seo: serverData?.seo || idbData?.seo || cachedData?.seo || null,
         updatedAt: Math.max(Number(serverData?.updatedAt || 0), Number(idbData?.updatedAt || 0))
       };
     } else {
@@ -266,6 +268,57 @@ async function loadSiteData() {
     window.currentSiteData.properties.forEach(p => {
       propertyLookup[p.id] = p;
     });
+  }
+}
+
+/**
+ * Apply Dynamic SEO Settings from siteData.seo to Document Head
+ */
+function applySEO() {
+  if (!window.currentSiteData || !window.currentSiteData.seo) return;
+  const seo = window.currentSiteData.seo;
+
+  if (seo.metaTitle) {
+    document.title = seo.metaTitle;
+  }
+
+  if (seo.metaDescription) {
+    let d = document.querySelector('meta[name="description"]');
+    if (!d) { d = document.createElement('meta'); d.name = 'description'; document.head.appendChild(d); }
+    d.content = seo.metaDescription;
+  }
+
+  if (seo.keywords) {
+    let k = document.querySelector('meta[name="keywords"]');
+    if (!k) { k = document.createElement('meta'); k.name = 'keywords'; document.head.appendChild(k); }
+    k.content = seo.keywords;
+  }
+
+  if (seo.canonicalUrl) {
+    let c = document.querySelector('link[rel="canonical"]');
+    if (!c) { c = document.createElement('link'); c.rel = 'canonical'; document.head.appendChild(c); }
+    c.href = seo.canonicalUrl;
+  }
+
+  if (seo.ogTitle) {
+    let ot = document.querySelector('meta[property="og:title"]');
+    if (ot) ot.content = seo.ogTitle;
+  }
+
+  if (seo.ogDescription) {
+    let od = document.querySelector('meta[property="og:description"]');
+    if (od) od.content = seo.ogDescription;
+  }
+
+  if (seo.ogImage) {
+    let oi = document.querySelector('meta[property="og:image"]');
+    if (oi) oi.content = seo.ogImage;
+  }
+
+  if (seo.googleVerification) {
+    let gv = document.querySelector('meta[name="google-site-verification"]');
+    if (!gv) { gv = document.createElement('meta'); gv.name = 'google-site-verification'; document.head.appendChild(gv); }
+    gv.content = seo.googleVerification;
   }
 }
 
