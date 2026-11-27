@@ -670,9 +670,23 @@ Including Image Metadata:
 
                 <div class="p-3 bg-white rounded-xl border border-[#E7E0D5] font-mono text-[11px] text-stone-700 max-h-40 overflow-y-auto whitespace-pre leading-relaxed">User-agent: *
 Allow: /
-Disallow: /admin.html
-Disallow: /seo-admin.html
-Disallow: /covers.html
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+Disallow: /admin*
+Disallow: /seo*
+Disallow: /covers*
+Disallow: /assets/covers/
+Disallow: /assets/data/
+Disallow: /*.ps1$
+Disallow: /*.json$
+Disallow: /*?*tab=*
+Disallow: /*?*fbclid=*
+Disallow: /*?*utm_*
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+Disallow: /assets/covers/
 
 Sitemap: https://jaipurprimeproperty.in/sitemap.xml</div>
 
